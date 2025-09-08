@@ -65,7 +65,7 @@
 	<set var="check_click" val="false" />
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
-	<set var="idle_enabled" val="false" />
+	<set var="idle_enabled" val="true" />
 	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
 	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
 	
@@ -515,9 +515,6 @@
 
 	<action name="do_cover_image">
 		if(device.mobile or device.tablet,
-			set(layer[cover_img].visible,false);
-			set(layer[cover_img_mobile].visible,true);
-			set(layer[cover_img_mobile].width,100%);
 			set(layer[btn_voice].width,80); set(layer[btn_voice].height,80); set(layer[btn_voice].y,28);
 			set(layer[icon_voice].width,80); set(layer[icon_voice].height,80);
 			set(layer[icon_voice_off].width,80); set(layer[icon_voice_off].height,80);
@@ -544,7 +541,7 @@
         keep="true"
         onloadcomplete="do_cover_image();" />
 
-<layer name="cover"
+<!-- <layer name="cover"
        type="container"
        keep="true"
        visible="true"
@@ -561,9 +558,9 @@
 			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
 			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
          "
-	   >
+	   > -->
 
-  <layer name="cover_img"
+  <!-- <layer name="cover_img"
          url="banner.png"           
          align="center"
          width="100%" height="100%"
@@ -631,7 +628,7 @@
                  " 
          />
 		</layer>
-</layer>
+</layer> -->
 
 <events name="ev_idle" keep="true"
   onnewpano="if(idle_enabled, restart_idle());"
