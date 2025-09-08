@@ -15,7 +15,7 @@
 	       onloaded.addevent="skin_hotspotstyle_setup();"
 	       />
 
-	<style name="skin_hotspot_flycam_style" url="icons/helicopter.png" edge="top" distorted="true"
+	<style name="skin_hotspot_flycam_style" url="icons/helicopter.png" edge="top" distorted="false"
 	       tooltip=""
 	       linkedscene=""
 	       linkedscene_lookat=""
