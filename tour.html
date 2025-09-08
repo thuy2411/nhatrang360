@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Nha Trang 360</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta href="favicon.ico" rel="icon" type="image/x-icon" />
+	<style>
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+	</style>
+</head>
+<body>
+<audio id="bg_music" preload="auto">
+  <source id="bgSource" src="" type="audio/mpeg">
+</audio>
+<audio id="intro" preload="auto">
+  <source id="introSource" src="" type="audio/mpeg">
+</audio>
+<script src="tour.js"></script>
+
+<div style="width:100%;height:100%;">
+	<noscript><table style="width:100%;height:100%;"><tr style="vertical-align:middle;text-align:center;"><td>ERROR:<br><br>Javascript not activated<br><br></td></tr></table></noscript>
+	<script>
+ 		window.krpano = null;
+ 		embedpano({
+ 			xml: "tour.xml",
+ 			passQueryParameters: "startscene,startlookat",
+ 			onready: function(krpanoInterface) {
+ 				window.krpano = krpanoInterface;
+ 			},
+			webglsettings: {
+				preserveDrawingBuffer: true
+			}
+ 		});
+		window.openHref = function (href, target) {
+			window.open(href, target || "_self");
+		};
+	</script>
+</div>
+<script>
+  const bg_audio = document.getElementById("bg_music");
+  const bgSource = document.getElementById("bgSource");
+  const intro_audio = document.getElementById("intro");
+  const introSource = document.getElementById("introSource");
+  let sceneBefore = "";
+  let docBefore = "";
+  function playAudio(doc, isToggle) {
+	switch(doc){
+		case "chua-long-son":
+			bgSource.src = "music/bg_music-chua-long-son.wav";
+			break;
+		case "thap-ponagar":
+			bgSource.src = "music/bg_music-thap-ponagar.wav";
+			break;
+		case "vin-wonder":
+			bgSource.src = "music/bg_music-vin-wonder.wav";
+			break;
+		case "quang-truong":
+			bgSource.src = "music/bg_music-quang-truong.wav";
+			break;
+		case "bai-bien":
+			bgSource.src = "music/bg_music-bai-bien.wav";
+			break;
+	};
+	if (isToggle=='on') {
+		if (docBefore == "") {
+			bg_audio.load();
+			docBefore = doc;
+		}
+		if (docBefore != doc) {
+			bg_audio.load();       
+		}
+		bg_audio.volume = 0.1;
+		bg_audio.play(); 
+		docBefore = doc;
+	} else {
+	  bg_audio.pause();
+	}
+  }
+
+  function playIntro(doc, isToggle) {
+	switch(doc){
+		case "chua-long-son":
+			introSource.src = "intro/chua-long-son.wav";
+			break;
+		case "thap-ponagar":
+			introSource.src = "intro/thap-ponagar.wav";
+			break;
+		case "vin-wonder":
+			introSource.src = "intro/vin-wonder.wav";
+			break;
+		case "quang-truong":
+			introSource.src = "intro/quang-truong.wav";
+			break;
+		case "bai-bien":
+			introSource.src = "intro/bai-bien.wav";
+			break;
+	};
+	if (isToggle=='on') {
+		if (sceneBefore == "") {
+			intro_audio.load();
+			sceneBefore = doc;
+		}
+		if (sceneBefore != doc) {
+			intro_audio.load();       
+		}
+		intro_audio.volume = 0.4;
+		intro_audio.play(); 
+		sceneBefore = doc;
+	} else {
+	  intro_audio.pause();
+	}
+  }
+function updateBgmProgress() {
+	const bg_audio = document.getElementById("bg_music");
+	if (bg_audio.duration > 0) {
+		let percent = (bg_audio.currentTime / bg_audio.duration) * 100;
+		if (percent > 100) percent = 100;
+		// Nếu đã phát hết lần đầu, giữ ở 100%
+		if (bg_audio.currentTime >= bg_audio.duration) {
+			percent = 100;
+		}
+		// Gửi giá trị phần trăm sang krpano
+		if (window.krpano) {
+			window.krpano.set("bgm_progress_percent", percent);
+			window.krpano.call(`set(layer[bgm_progress_fill].width, ${2.48 * percent});`);
+		}
+	}
+	// Nếu phát lại (bắt đầu lại), reset về 0
+	if (bg_audio.currentTime === 0) {
+		if (window.krpano) {
+			window.krpano.set("bgm_progress_percent", 0);
+			window.krpano.call(`set(layer[bgm_progress_fill].width, 0);`);
+		}
+	}
+}
+
+// Gọi hàm này khi phát nhạc
+bg_audio.addEventListener("timeupdate", updateBgmProgress);
+</script>
+</body>
+</html>

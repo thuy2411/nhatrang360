@@ -1,0 +1,145 @@
+<krpano>
+    <style name="skin_hotspot_drone" url="icons/drone.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+           width="120"
+           height="120"
+	       onover.addevent="tween(scale,0.55);"
+	       onout.addevent="tween(scale,0.5);"
+	       onloaded.addevent="skin_hotspotstyle_setup();"
+	       />
+
+	<style name="skin_hotspot_flycam_style" url="icons/helicopter.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+           width="100"
+           height="100"
+	       onover.addevent="hotspot_flycam_thumb_new(true);"
+	       onloaded.addevent="do_crop_animation(120,120,50);"
+	       />
+	<style name="skin_hotspot_here" url="icons/here.png" edge="top" distorted="false"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+           width="80"
+           height="80"
+	       onover.addevent="tween(scale,0.55); hotspot_flycam_thumb(true);"
+	       onout.addevent="tween(scale,0.5); hotspot_flycam_thumb(false);"
+	       onloaded.addevent="do_crop_animation(120,120,50);"
+	       />
+    <style name="skin_hotspotstyle_hover"
+	    onclick="skin_hotspotstyle_click();"
+      onover.addevent="hotspot_flycam_thumb_new(true);"
+	    onout.addevent="hotspot_flycam_thumb_new(false);" />
+
+    <data name="quang-truong"><![CDATA[
+		&nbsp;&nbsp;&nbsp;&nbsp;Quảng trường 2/4 nằm ngay trung tâm đường Trần Phú, được xây dựng để kỷ niệm ngày giải phóng Nha Trang (2/4/1975). Đây là nơi tổ chức nhiều sự kiện văn hóa, lễ hội biển và hoạt động cộng đồng lớn của thành phố. Giữa quảng trường nổi bật công trình Tháp Trầm Hương, khánh thành năm 2008 với kiến trúc cách điệu từ hình ảnh cánh buồm và bông sen. Công trình được xem như biểu tượng mới của Nha Trang, thay thế dần hình ảnh Tháp Bà Ponagar truyền thống trong vai trò biểu trưng hiện đại. Tháp gồm nhiều tầng, bên trong có không gian triển lãm trưng bày hình ảnh, sản phẩm du lịch và trầm hương Khánh Hòa. Vị trí này hướng thẳng ra biển Trần Phú, tạo nên cảnh quan vừa hiện đại vừa gần gũi thiên nhiên. Nơi đây ban ngày tấp nập khách du lịch, ban đêm rực rỡ ánh đèn, thường xuyên diễn ra biểu diễn nghệ thuật đường phố. Quảng trường cũng là điểm tập trung cho các sự kiện Festival Biển Nha Trang. Ngoài giá trị cảnh quan, tháp còn mang ý nghĩa tôn vinh ngành trầm hương – sản vật quý của địa phương.</br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Không chỉ là biểu tượng hiện đại, Tháp Trầm Hương còn gắn liền với đời sống tinh thần của người dân Nha Trang. Công trình được thiết kế gồm nhiều tầng, tượng trưng cho hương trầm bay tỏa lên trời cao. Bên trong trưng bày những sản vật quý của Khánh Hòa như trầm hương, yến sào, ngọc trai. Du khách có thể tham quan, tìm hiểu về lịch sử khai thác trầm hương, một nghề truyền thống đã tồn tại hàng trăm năm. Quảng trường phía ngoài là nơi tụ tập của giới trẻ vào buổi tối, đặc biệt trong những ngày lễ hội. Nhiều hoạt động cộng đồng như triển lãm nghệ thuật, lễ diễu hành, chương trình ca nhạc được tổ chức tại đây. Nhờ vị trí trung tâm, nơi này kết nối các điểm du lịch khác trên tuyến đường Trần Phú. Vào những dịp Festival Biển, quảng trường trở thành không gian lễ hội hoành tráng, thu hút hàng chục nghìn du khách. Đây thực sự là trái tim sôi động của thành phố Nha Trang.
+        ]]>
+	</data>
+
+    <data name="bai-bien"><![CDATA[
+        &nbsp;&nbsp;&nbsp;&nbsp;Bãi biển Trần Phú kéo dài hơn 7 km dọc theo con đường cùng tên, được xem là “trái tim” của du lịch Nha Trang. Nơi đây có bờ cát trắng mịn, sóng êm và nước biển xanh ngọc, phù hợp cho cả tắm biển lẫn các hoạt động thể thao dưới nước. Đoạn đường Trần Phú còn được mệnh danh là “con đường đẹp nhất thành phố” với hàng loạt khách sạn, resort, nhà hàng hướng biển. Vào buổi sáng, du khách dễ dàng bắt gặp cảnh người dân tập thể dục, đánh cầu lông hoặc chèo SUP. Buổi tối, bãi biển rực sáng nhờ hệ thống đèn, trở thành không gian dạo mát lý tưởng. Lịch sử hình thành con đường này gắn với quá trình đô thị hóa của Nha Trang từ thời Pháp thuộc. Trải qua nhiều thập kỷ, biển Trần Phú vẫn giữ được nét quyến rũ, là nơi đón hàng triệu lượt khách mỗi năm. Khu vực còn góp phần phát triển kinh tế – dịch vụ của thành phố. </br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Ngoài vẻ đẹp thiên nhiên, bãi biển Trần Phú còn là nơi gắn với nhiều sự kiện lịch sử của Nha Trang. Trong thời Pháp thuộc, đây là khu vực quy hoạch đầu tiên để xây dựng khách sạn và biệt thự nghỉ dưỡng cho giới thượng lưu. Nhiều công trình cổ điển kiểu Pháp vẫn còn dấu tích dọc đường Trần Phú. Hiện nay, nơi đây phát triển thành trung tâm du lịch với hàng loạt khách sạn từ bình dân đến cao cấp. Bãi biển cũng được quản lý tốt, thường xuyên tổ chức dọn vệ sinh, bảo đảm môi trường xanh – sạch – đẹp. Vào mùa hè, các giải thể thao bãi biển như bóng chuyền, lướt ván diều được tổ chức, tạo không khí sôi động. Các dịch vụ giải trí như moto nước, dù bay, thuyền chuối mang lại trải nghiệm hấp dẫn cho du khách. Bên cạnh đó, con đường ven biển là địa điểm lý tưởng để ngắm bình minh và hoàng hôn. Chính sự kết hợp giữa cảnh quan, lịch sử và dịch vụ đã làm nên giá trị đặc biệt của bãi biển Trần Phú. Đây là hình ảnh tiêu biểu gắn liền với thương hiệu “Nha Trang – Thành phố biển”.
+		]]>
+	</data>
+
+	<data name="chua-long-son"><![CDATA[
+		&nbsp;&nbsp;&nbsp;&nbsp;Chùa Long Sơn được xây dựng vào cuối thế kỷ 19 dưới triều Nguyễn, ban đầu chỉ là một ngôi chùa nhỏ bằng tre lá. Sau nhiều lần trùng tu, chùa hiện trở thành trung tâm Phật giáo lớn nhất tỉnh Khánh Hòa. Điểm nhấn nổi bật nhất là tượng Phật Trắng (Kim Thân Phật Tổ) cao 24 m, ngồi trên đài sen, có thể nhìn thấy từ nhiều nơi trong thành phố. Quần thể chùa nằm dưới chân núi Trại Thủy, được bao quanh bởi cây xanh, tạo không gian tĩnh lặng, thanh tịnh. Trong khuôn viên còn nhiều pho tượng, bia đá và kiến trúc chạm khắc tinh xảo. Chùa là nơi diễn ra các lễ hội Phật giáo quan trọng, thu hút đông đảo tăng ni và du khách. Về lịch sử, chùa gắn liền với phong trào chấn hưng Phật giáo miền Trung trong thế kỷ 20. Nơi đây cũng lưu giữ nhiều hiện vật và dấu ấn văn hóa Phật giáo Khánh Hòa. </br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Chùa Long Sơn không chỉ là nơi thờ tự linh thiêng mà còn là trung tâm giáo dục Phật học của Khánh Hòa. Từ những năm 1930, chùa đã mở lớp giảng dạy kinh điển, góp phần đào tạo nhiều thế hệ tăng ni. Kiến trúc chùa mang nét truyền thống Á Đông với mái ngói cong, rồng phượng chạm khắc tinh xảo. Trải qua nhiều lần tu sửa do thiên tai và chiến tranh, chùa vẫn giữ được sự uy nghi và thanh tịnh. Du khách khi đến chùa thường leo hơn 150 bậc thang để lên đến tượng Phật lớn. Trên đường đi, có thể dừng chân tham quan các tượng Phật nhập Niết Bàn, Phật tử ngồi thiền. Từ vị trí cao nhìn xuống, toàn cảnh thành phố Nha Trang và biển xanh hiện ra tuyệt đẹp. Chùa cũng là nơi diễn ra các hoạt động từ thiện, hỗ trợ người nghèo và trẻ mồ côi. Điều đó khiến Long Sơn không chỉ là điểm du lịch mà còn là trung tâm văn hóa – xã hội quan trọng, là địa điểm tham quan, hành hương nổi tiếng của du khách trong và ngoài nước.
+	 	]]>
+	</data>
+
+	<data name="thap-ponagar"><![CDATA[
+		&nbsp;&nbsp;&nbsp;&nbsp;Tháp Bà Ponagar được xây dựng từ thế kỷ 8–13 bởi người Chăm, thờ nữ thần Po Nagar – vị thần Mẹ của xứ sở. Đây là một trong những quần thể kiến trúc Chăm Pa lớn nhất còn lại ở miền Trung Việt Nam. Công trình gồm nhiều tháp gạch đỏ, trong đó tháp chính cao khoảng 23 m, mang đậm phong cách kiến trúc Chămpa cổ. Địa điểm nằm trên một ngọn đồi nhỏ gần cửa sông Cái, có vị trí phong thủy hài hòa giữa núi và biển. Trải qua hơn ngàn năm, tháp vẫn giữ được nhiều nét nguyên gốc, trở thành minh chứng lịch sử cho nền văn minh Chăm Pa. Hằng năm, lễ hội Tháp Bà diễn ra vào tháng 3 âm lịch, thu hút đông đảo người dân và du khách hành hương. Ngoài giá trị tôn giáo, nơi đây còn có ý nghĩa văn hóa – lịch sử đặc biệt, phản ánh sự giao thoa giữa người Việt và người Chăm. </br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Tháp Bà Ponagar là minh chứng rõ rệt cho sự phát triển rực rỡ của vương quốc Chăm Pa. Kỹ thuật xây dựng tháp vẫn còn là bí ẩn với giới nghiên cứu: các viên gạch kết dính chặt chẽ mà không thấy vữa. Kiến trúc tháp có nhiều tầng, thể hiện quan niệm vũ trụ quan của người Chăm. Trong lòng tháp chính vẫn còn tượng nữ thần bằng đá hoa cương cao gần 3 m, được thờ phụng hàng trăm năm nay. Lễ hội Tháp Bà hằng năm không chỉ mang tính tôn giáo mà còn là sinh hoạt văn hóa cộng đồng, với các điệu múa Chăm và nhạc cụ truyền thống. Đây là dịp để người Chăm ở nhiều nơi hội tụ về Nha Trang, duy trì phong tục tổ tiên. Tháp Bà cũng được công nhận là di tích cấp quốc gia đặc biệt từ năm 1979, khẳng định giá trị lịch sử – văn hóa lớn lao. Du khách đến đây không chỉ tham quan di tích mà còn có cơ hội tìm hiểu sâu hơn về nền văn minh Chăm Pa cổ xưa.Tháp Bà Ponagar hiện là một di tích cấp quốc gia đặc biệt, là điểm nhấn trong hành trình du lịch Nha Trang. 
+		]]>
+	</data>
+
+	<data name="vin-wonder"><![CDATA[
+		&nbsp;&nbsp;&nbsp;&nbsp;VinWonders Nha Trang tọa lạc trên đảo Hòn Tre, bắt đầu hoạt động từ năm 2006 với tên gọi Vinpearl Land. Khu vui chơi giải trí được xây dựng theo chuẩn quốc tế, do tập đoàn Vingroup đầu tư. Điểm đặc biệt là hệ thống cáp treo vượt biển dài hơn 3 km – từng là dài nhất thế giới – nối liền đất liền với đảo. Bên trong khuôn viên rộng hàng chục hecta có công viên nước, thủy cung, khu trò chơi mạo hiểm, công viên chủ đề và khu biểu diễn nhạc nước. Cảnh quan nơi đây vừa hiện đại, vừa gắn liền với vẻ đẹp thiên nhiên biển đảo Hòn Tre. VinWonders trở thành điểm đến hàng đầu của du khách trong nước và quốc tế khi đến Nha Trang. Ngoài vui chơi giải trí, nơi đây còn tổ chức nhiều sự kiện văn hóa – thể thao tầm cỡ, như Hoa hậu Hoàn vũ 2008. Sự hiện diện của VinWonders góp phần khẳng định vị thế Nha Trang trên bản đồ du lịch quốc tế.</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;VinWonders không chỉ đơn thuần là khu vui chơi mà còn là điểm nhấn du lịch mang tính toàn cầu. Công viên nước ở đây có nhiều trò chơi cảm giác mạnh, trong đó có đường trượt cao và dài bậc nhất châu Á. Thủy cung rộng lớn với hàng nghìn loài sinh vật biển, tái hiện hệ sinh thái đại dương sống động. Khu trò chơi ngoài trời bao gồm tàu lượn siêu tốc, đu quay khổng lồ, thích hợp cho cả gia đình và giới trẻ. Ngoài ra, VinWonders còn có khu làng cổ, phố mua sắm và khu ẩm thực phong phú. Hệ thống biểu diễn nhạc nước buổi tối tạo nên trải nghiệm đáng nhớ cho du khách. Với cảnh quan hiện đại, VinWonders được xem như “Disneyland của Việt Nam”. Nhiều sự kiện văn hóa lớn từng diễn ra tại đây, góp phần quảng bá hình ảnh Nha Trang ra thế giới. Đến VinWonders, du khách vừa được vui chơi giải trí, vừa cảm nhận không khí lễ hội trọn vẹn. 	 		]]>
+	</data>
+
+    <action name="hotspot_flycam_thumb_new" scope="local" args="isTrue">
+		if(isTrue,
+			set(hotspot[calc(get(caller.name) +'thumb')].url, get(scene[get(caller.linkedscene)].thumburl));
+			set(hotspot[calc(get(caller.name) +'thumb')].ath, get(caller.ath));
+			set(hotspot[calc(get(caller.name) +'thumb')].atv, get(caller.atv));
+			set(hotspot[calc(get(caller.name) +'thumb')].visible, true);
+			set(skin_settings.autotour, false);
+			autorotate.stop();
+			,
+			set(hotspot[calc(get(caller.name))].visible, false);
+			set(skin_settings.autotour, true);
+			if(layer[icon_rotate_off].visible==false,
+				autorotate.start();
+			)
+		);
+		
+	</action>
+
+  <style name="poi_line" type="container"
+    bg="true" width="2" edge="bottom" align="bottom"
+    bgalpha="1" 
+    bgcolor="0xFFFFFF" />
+
+  <style name="poi_label_text"  oy="-135" ox="3"
+    type="text" padding="6 10 6 10" scale="0" edge="left" align="left"
+    css="font-family:Helvetica;font-size:14px;color:#fff;text-wrap:nowrap; border:1px solid yellow;"
+    bg="true" bgalpha="1" bgcolor="0x27C1B5" 
+    bgshadow="true"  onclick="skin_hotspotstyle_click();" />  
+
+  <events name="poi_evt" keep="true"
+    onviewchange="poi_update_labels();" />
+
+  <action name="poi_update_labels" scope="local">
+    for(set(h,0), h LT hotspot.count, inc(h),
+      if(hotspot[get(h)].is_show == true,
+        copy(hn,   hotspot[get(h)].name);
+        copy(hath, hotspot[get(hn)].ath );
+        copy(hatv, hotspot[get(hn)].atv );
+        spheretoscreen(hath, hatv, sx, sy);
+        if(sx != null AND sy != null AND sx GE 0 AND sx LE get(stagewidth),
+          if(sy GE 0 AND sy LE get(stageheight),
+            
+             /* ---- FOCUS THEO PIXEL QUANH TÂM ---- */
+            calc(cx, get(stagewidth)  * 0.5);
+            calc(cy, get(stageheight) * 0.5);
+            calc(dxpx, abs(sx - cx));
+            calc(dypx, abs(sy - cy));
+
+            /* bán kính vùng chú ý (px) – có thể override per-hotspot bằng attr focus_radius */
+            set(focus_radius, 600);
+            if(hotspot[get(hn)].focus_radius, copy(focus_radius, hotspot[get(hn)].focus_radius); );
+
+            if(dxpx LE focus_radius AND dypx LE focus_radius,
+              set(hotspot[get(hn)].visible,true);
+              tween(hotspot[get(hn)].scale,1,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,150,1,easeOutExpo);
+            ,
+              tween(hotspot[get(hn)].scale,0,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,0,1,easeOutExpo);
+            );
+          );
+        );,
+      );
+    );
+  </action>
+</krpano>
