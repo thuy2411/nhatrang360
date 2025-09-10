@@ -95,11 +95,16 @@
 	         bouncinglimits="true"
 	         />
 	<data name="next-tour"><![CDATA[
-		Hành trình tiếp theo: Khám Phá Đảo Và Ngoại Ô</br>
 		🐚Đảo Hòn Mun: Nổi tiếng với rạn san hô rực rỡ, thiên đường lặn ngắm biển hiếm có.</br>
 		🌴Đảo Hòn Tằm: Không gian nghỉ dưỡng yên bình, bãi cát mịn và dịch vụ sang trọng.</br>
 		🛍️Chợ Đầm: Trung tâm mua sắm sầm uất, nơi tìm thấy đủ loại đặc sản và quà lưu niệm.</br>
-		⛴️Bến du thuyền Ana Marina: Điểm hẹn sang trọng ngắm hoàng hôn, hòa mình giữa không gian biển và nhịp sống hiện đại.        ]]>
+		⛴️Bến du thuyền Ana Marina: Điểm hẹn sang trọng ngắm hoàng hôn, hòa mình giữa không gian biển và nhịp sống hiện đại.        
+		]]>
+	</data>
+	<data name="next-tour-text">
+		<![CDATA[
+		Hành trình tiếp theo: Khám Phá Đảo Và Ngoại Ô 
+		]]>
 	</data>
 	<!-- mouse cursors - https://krpano.com/docu/xml/#cursors -->
 	<cursors standard="default"
@@ -827,62 +832,128 @@
 				<layer name="btn_gogogo" type="container" align="righttop" x="20" y="18" width="144" height="144"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));" bgroundedge="70"  maskchildren="true">
 					<layer name="icon_gogogo" capture="false" style="skin_tooltips" url="icons/gogogo.gif" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center"/>
 				</layer>
-				<layer name="text_finish" capture="false" align="top" x="0" y="50" type="text" html="Chúc mừng bạn đã hoàn thành tour! Nhấn để tiếp tục hành trình mới" visible="false" width="220" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic; color:0xff0000;'" txtshadow="get:skin_settings.design_text_txtshadow" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"/>
-				<layer name="box_last_img" type="container" align="top" x="0" y="20" width.normal="700" width.mobile="80%" height="80%" bgcolor="0x5c64af" bgalpha="1" bgborder="1 0x777777 0.5" bgroundedge="7" bgshadow="0 4 20 0x000000 0.25" visible="false">
-					<layer name="box_title_last_img" y="0" type="text" align="top" width="100%" height="50" bgalpha="1.0" zorder="2" bgcolor="0x5c64af" bgborder="0">
-						<layer name="content_last_img" type="text" html="Chúc mừng bạn đã hoàn thành Tour!" align="center" x="0" width="100%" height="20" css="color:white; font-size:18px; text-align:center; text-transform: uppercase" bgalpha="0.0" zorder="2"/>
-						</layer>
-						<layer name="close_button_last_img"
-								url="icons/close.png"
-								align="righttop"
-								x="0" y="5"
-								width="36" height="36"
-								handcursor="true"
-								onclick="show_info_last_img();"
-								zorder="2"
-						/>
-						<layer name="scrollarea_last_img"
-								type="scrollarea"
-								width="-10" flowchildren="v" childmargin="50 0 10 10"
-								scrolltype.desktop="smooth"
-								scrolltype.tablet.or.mobile="inertia"
-								direction="v"
-								draggable="true"
-								mwheel="true"
-								capturechildren="true"
-								autoscrollbars="null,vscrollbar_grip,10"
-								onhover_autoscrolling="false"
-								onscroll=""
-								onoverflowchange=""
-						>
-						<layer name="content_text_last_img" type="text" align="lefttop" html="get:data[next-tour].content" htmlautosize="true" width="100%" bgalpha="0.0" css="color:white; font-size:1.5rem; text-align:justify; line-height: 1.5; font-family: Arial, sans-serif; padding: 10px;"/>
+				<!-- <layer name="text_finish" capture="false" align="top" x="0" y="50" type="text" html="Chúc mừng bạn đã hoàn thành tour! Nhấn để tiếp tục hành trình mới" visible="false" width="220" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic; color:0xff0000;'" txtshadow="get:skin_settings.design_text_txtshadow" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"/> -->
+				<layer name="text_finish"
+					type="text"
+					align="top"
+					x="0" y="50"
+					width="420" height="auto"
+					capture="true"
+					visible="false"
+					scale="1"
+					bgcolor="0x000000" bgalpha="0.65"
+					bgroundedge="12"
+					bgshadow="0 4 18 0x000000 0.4"
+					padding="12 16"
+					origin="center"
+					css="text-align:center; font-size:18px; font-weight:bold; font-style:italic; color:#FACC15; font-family:Arial, sans-serif; line-height:1.4;"
+					txtshadow="1.5 1.5 3 0x000000 0.8"
+					html="🎉 Chúc mừng bạn đã hoàn thành tour!&lt;/br&gt;👉 Nhấn để tiếp tục hành trình mới"
+					onclick="show_info_last_img();"
+				/>
+
+				<layer name="box_last_img" type="container" align="top" x="0" y="20"
+						width.normal="700" width.mobile="80%" height="80%"
+						bgcolor="0x0B1220" bgalpha="0.95"
+						bgborder="1 0x334155 0.6"
+						bgroundedge="7"
+						bgshadow="0 6 24 0x000000 0.3"
+						visible="false">
+
+					<layer name="box_title_last_img" y="0" type="text" align="top" width="100%" height="50"
+							bgcolor="0x1F2937" bgalpha="1.0" zorder="2">
+						<layer name="content_last_img" type="text"
+							html="Chúc mừng bạn đã hoàn thành Tour!"
+							align="center" x="0" width="100%" height="20"
+							css="color:#FACC15; font-size:18px; font-weight:bold; text-align:center; text-transform: uppercase"
+							bgalpha="0.0" zorder="2"/>
 					</layer>
+
+					<layer name="close_button_last_img"
+							url="icons/close.png"
+							align="righttop"
+							x="0" y="5"
+							width="36" height="36"
+							handcursor="true"
+							onclick="show_info_last_img();"
+							zorder="2"
+					/>
+
+					<layer name="scrollarea_last_img" type="scrollarea"
+							width="-10" flowchildren="v" childmargin="50 0 10 10"
+							scrolltype.desktop="smooth"
+							scrolltype.tablet.or.mobile="inertia"
+							direction="v" draggable="true" mwheel="true"
+							capturechildren="true"
+							autoscrollbars="null,vscrollbar_grip,10"
+							onhover_autoscrolling="false">
+						<layer name="content_text_next_tour_last_img"
+							type="text"
+							align="lefttop"
+							html="get:data[next-tour-text].content"
+							htmlautosize="true"
+							width="100%" bgalpha="0.0"
+							css="color:#2DD4BF; font-size:22px; font-weight:bold; text-align:left; line-height:1.6; font-family:Arial, sans-serif; padding:8px 12px;"/>
+						<layer name="content_text_last_img" type="text"
+							align="lefttop"
+							html="get:data[next-tour].content"
+							htmlautosize="true"
+							width="100%" bgalpha="0.0"
+							css="color:#E5E7EB; font-size:1.5rem; text-align:justify; line-height: 1.5; font-family: Arial, sans-serif; padding: 10px;"/>
+					</layer>
+
 					<layer name="btn_explore_text"
-						type="text"
-						align="bottom"       
-						width="170" height="50"
-						x="-150" y="10"
-						roundedge="10"
-						bgcolor="0x0e81af" bgalpha="1.0"
-						css="color:#010ed1; font-size:20px; font-weight:bold; text-align:center; line-height:50px; font-family: Arial, sans-serif;"
-						html="Lên Đường Thôi!"
-						onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"
-					/>
+							type="text"
+							align="bottom"
+							width="170" height="50"
+							x="-170" y="10"
+							roundedge="10"
+							bgcolor="0x22C55E" bgalpha="1.0"
+							css="color:#FFFFFF; font-size:20px; font-weight:bold; text-align:center; line-height:50px; font-family: Arial, sans-serif; padding-right:20px;"
+							html="Bắt Đầu"
+							onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"
+					>
+						<layer name="btn_explore_icon"
+						type="image"
+						align="center"       
+						width="50" height="50"
+						x="60"
+						bgcolor="0x000000" bgalpha="0.0"
+						url="icons/playred.png"
+						onclick="set(layer[cover].visible,false);
+								set(control.usercontrol, all);         
+								set(layer[icon_voice].visible, true);
+								set(layer[icon_voice_off].visible, false);
+								js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+								js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+								set(skin_settings.autotour, true);
+								autorotate.start();
+								set(idle_enabled, true);
+								delayedcall(idleswitch, 20, skin_nextscene(+1); );
+								" 
+						/>
+					</layer>
+
 					<layer name="btn_stop_text"
-						type="text"
-						align="bottom"       
-						width="170" height="50"
-						x="150" y="10"
-						roundedge="10"
-						bgcolor="0x0e81af" bgalpha="1.0"
-						css="color:#010ed1; font-size:20px; font-weight:bold; text-align:center; line-height:50px; font-family: Arial, sans-serif;"
-						html="Trở Lại"
-						onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) ); show_info_last_img();"
+							type="text"
+							align="bottom"
+							width="170" height="50"
+							x="150" y="10"
+							roundedge="10"
+							bgcolor="0x64748B" bgalpha="1.0"
+							css="color:#FFFFFF; font-size:20px; font-weight:bold; text-align:center; line-height:50px; font-family: Arial, sans-serif;"
+							html="Trở Lại"
+							onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1)); show_info_last_img();"
 					/>
+
 					<layer name="vscrollbar_bg_last_img" type="container" align="right" width="16" height="100%">
-						<layer name="vscrollbar_grip_last_img" type="container" align="righttop" width="8" x="4" height="16" bgcolor="0xAAAAAA" bgalpha="0.5" bgroundedge="7" bgcapture="true" />
+						<layer name="vscrollbar_grip_last_img"
+							type="container" align="righttop" width="8" x="4" height="16"
+							bgcolor="0x94A3B8" bgalpha="0.6"
+							bgroundedge="7" bgcapture="true" />
 					</layer>
 				</layer>
+
 				<layer name="text_goback" capture="false" align="lefttop" x="0" y="0" type="text" visible="false"  html="Về Trang Chính" width="140" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic;'" txtshadow="get:skin_settings.design_text_txtshadow"/>
 				<layer name="btn_goback" type="container" align="lefttop" x="20" y="18" width="100" height="100"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/', '_self'));" bgroundedge="70"  maskchildren="true">
 					<layer name="icon_goback" capture="false" style="skin_tooltips_left" tooltip="Trang Chủ" visible="true"  url="icons/logo-nhatrang.png" align="center" x="0" y="0" width="100" height="100" scale="1" origin="center" onover="set(layer[text_goback].visible,true);" onout="set(layer[text_goback].visible,false);"/>
