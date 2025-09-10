@@ -760,7 +760,7 @@
 
 	</scene>
 
-	<scene name="scene_ho_ca_map_1" title="Hồ cá mập" onstart="lookat(-100,0,120)" thumburl="panos/Ho_ca_map_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
+	<scene name="scene_ho_ca_map_1" title="Hồ cá mập" onstart="lookat(-100,0,120)" thumburl="panos/Ho_ca_map_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -777,7 +777,7 @@
 
 	</scene>
 
-	<scene name="scene_ho_ca_map_3" title="Hồ cá mập" onstart="lookat(-50,10,120)" thumburl="panos/Ho_ca_map_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
+	<scene name="scene_ho_ca_map_3" title="Hồ cá mập" onstart="lookat(-50,10,120)" thumburl="panos/Ho_ca_map_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
