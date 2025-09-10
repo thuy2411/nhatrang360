@@ -1113,7 +1113,7 @@
 
 	</scene>
 
-		<scene name="scene_khu_trung_bay_t1_3(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-90,0,120)" thumburl="panos/Khu_trung_bay_T1_3(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+		<scene name="scene_khu_trung_bay_t1_3(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-140,10,120)" thumburl="panos/Khu_trung_bay_T1_3(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -1126,7 +1126,7 @@
 		</image>
 
 		<hotspot name="spot1795957878" style="skin_hotspotstyle" ath="-162.061" atv="16.279" depth="1000.0" linkedscene="scene_khu_trung_bay_t1_4" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1795959314" style="skin_hotspotstyle" ath="-90.341" atv="13.86" depth="1000.0" linkedscene="scene_khu_trung_bay_t1_5" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1795959314" style="skin_hotspotstyle" ath="-90.341" atv="13.86" depth="1000.0" linkedscene="scene_khu_trung_bay_t2_1" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
