@@ -66,8 +66,8 @@
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
 	<set var="idle_enabled" val="true" />
-	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
-	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
+	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc'" />
+	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc'" />
 	
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
@@ -468,6 +468,7 @@
 		if(get(scene_doc)  == "vin-wonder", set(layer[menu_box_mobile_thumb_text].html, 'VinWonder'); );
 		if(get(scene_doc)  == "quang-truong", set(layer[menu_box_mobile_thumb_text].html, 'Quảng Trường 2-4'); );
 		if(get(scene_doc)  == "bai-bien", set(layer[menu_box_mobile_thumb_text].html, 'Bãi biển Trần Phú'); );
+		if(get(scene_doc)  == "vien-hai-duong-hoc", set(layer[menu_box_mobile_thumb_text].html, 'Viện Hải Dương Học'); );
 		
 		set(i, 0);
 		for(set(sceneindex, 0), sceneindex LT scene.count, inc(sceneindex),
@@ -1510,7 +1511,11 @@
 	</action>
 
 	<action name="show_info" scope="local">
-		set(layer[somecontent].html, get(data[get(scene[get(xml.scene)].doc)].content));
+		if(scene[get(xml.scene)].child == "",
+			set(layer[somecontent].html, get(data[get(scene[get(xml.scene)].doc)].content));
+			,
+			set(layer[somecontent].html, get(data[get(scene[get(xml.scene)].child)].content));
+		);
 		if(layer[box].visible,
 			tween(layer[box].alpha, 0, 0.5, default, set(layer[box].visible, false));
 		,
@@ -1542,12 +1547,19 @@
 			set(global.title, 'Quảng Trường 2-4'));
 		if(scene[get(xml.scene)].doc == "bai-bien",
 			set(global.title, 'Bãi biển Trần Phú'));
+		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
+			set(global.title, 'Viện Hải Dương Học'));
 	</action>
 
 	<action name="play_audio">
 	if(layer[icon_voice].visible == true,
-		js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-		js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+		if(scene[get(xml.scene)].child == "",
+			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+			,
+			js(playAudio(get(scene[get(xml.scene)].child),'on'));
+			js(playIntro(get(scene[get(xml.scene)].child),'on'));
+		);
 	);
 	</action>
 
@@ -1556,15 +1568,23 @@
 		if(layer[icon_voice].visible == true,
 			set(layer[icon_voice].visible, false);
 			set(layer[icon_voice_off].visible, true);
-			js(playAudio(get(scene[get(xml.scene)].doc),'off'));
-			js(playIntro(get(scene[get(xml.scene)].doc),'off'));
-
+			if(scene[get(xml.scene)].child == "",
+				js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+				js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+				,
+				js(playAudio(get(scene[get(xml.scene)].child),'on'));
+				js(playIntro(get(scene[get(xml.scene)].child),'on'));
+			);
 			,
 			set(layer[icon_voice].visible, true);
 			set(layer[icon_voice_off].visible, false);
-			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
-
+			if(scene[get(xml.scene)].child == "",
+				js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+				js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+				,
+				js(playAudio(get(scene[get(xml.scene)].child),'on'));
+				js(playIntro(get(scene[get(xml.scene)].child),'on'));
+			);
 		);
 	</action>
 
@@ -1736,8 +1756,13 @@
             set(control.usercontrol, all);         
 			set(layer[icon_voice].visible, true);
 			set(layer[icon_voice_off].visible, false);
-			js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-			js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+			if(scene[get(xml.scene)].child == "",
+				js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+				js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+				,
+				js(playAudio(get(scene[get(xml.scene)].child),'on'));
+				js(playIntro(get(scene[get(xml.scene)].child),'on'));
+			);
 			set(first_drag, false);
 		)
 		skin_showmap(false);
