@@ -66,8 +66,8 @@
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
 	<set var="idle_enabled" val="true" />
-	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc'" />
-	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc'" />
+	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
+	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
 	
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
@@ -832,7 +832,6 @@
 				<layer name="btn_gogogo" type="container" align="righttop" x="20" y="18" width="144" height="144"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));" bgroundedge="70"  maskchildren="true">
 					<layer name="icon_gogogo" capture="false" style="skin_tooltips" url="icons/gogogo.gif" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center"/>
 				</layer>
-				<!-- <layer name="text_finish" capture="false" align="top" x="0" y="50" type="text" html="Chúc mừng bạn đã hoàn thành tour! Nhấn để tiếp tục hành trình mới" visible="false" width="220" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic; color:0xff0000;'" txtshadow="get:skin_settings.design_text_txtshadow" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"/> -->
 				<layer name="text_finish"
 					type="text"
 					align="top"
@@ -914,23 +913,23 @@
 							onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"
 					>
 						<layer name="btn_explore_icon"
-						type="image"
-						align="center"       
-						width="50" height="50"
-						x="60"
-						bgcolor="0x000000" bgalpha="0.0"
-						url="icons/playred.png"
-						onclick="set(layer[cover].visible,false);
-								set(control.usercontrol, all);         
-								set(layer[icon_voice].visible, true);
-								set(layer[icon_voice_off].visible, false);
-								js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-								js(playIntro(get(scene[get(xml.scene)].doc),'on'));
-								set(skin_settings.autotour, true);
-								autorotate.start();
-								set(idle_enabled, true);
-								delayedcall(idleswitch, 20, skin_nextscene(+1); );
-								" 
+							type="image"
+							align="center"       
+							width="50" height="50"
+							x="60"
+							bgcolor="0x000000" bgalpha="0.0"
+							url="icons/playred.png"
+							onclick="set(layer[cover].visible,false);
+									set(control.usercontrol, all);         
+									set(layer[icon_voice].visible, true);
+									set(layer[icon_voice_off].visible, false);
+									js(playAudio(get(scene[get(xml.scene)].doc),'on'));
+									js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+									set(skin_settings.autotour, true);
+									autorotate.start();
+									set(idle_enabled, true);
+									delayedcall(idleswitch, 20, skin_nextscene(+1); );
+									" 
 						/>
 					</layer>
 
@@ -1597,7 +1596,6 @@
 	</action>
 
 	<action name="show_info_last_img" scope="local">
-		<!-- set(layer[somecontent].html, get(data[get(scene[get(xml.scene)].doc)].content)); -->
 		if(layer[box_last_img].visible,
 			tween(layer[box_last_img].alpha, 0, 0.5, default, set(layer[box_last_img].visible, false));
 		,
@@ -1640,11 +1638,11 @@
 			set(layer[icon_voice].visible, false);
 			set(layer[icon_voice_off].visible, true);
 			if(scene[get(xml.scene)].child == "",
-				js(playAudio(get(scene[get(xml.scene)].doc),'on'));
-				js(playIntro(get(scene[get(xml.scene)].doc),'on'));
+				js(playAudio(get(scene[get(xml.scene)].doc),'off'));
+				js(playIntro(get(scene[get(xml.scene)].doc),'off'));
 				,
-				js(playAudio(get(scene[get(xml.scene)].child),'on'));
-				js(playIntro(get(scene[get(xml.scene)].child),'on'));
+				js(playAudio(get(scene[get(xml.scene)].child),'off'));
+				js(playIntro(get(scene[get(xml.scene)].child),'off'));
 			);
 			,
 			set(layer[icon_voice].visible, true);
