@@ -377,7 +377,7 @@
 
 	</scene>
 	
-	<scene name="scene_ben_ngoai" title="Bên ngoài" onstart="lookat(-90,10,120)" thumburl="panos/Ben_ngoai.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="">
+	<scene name="scene_ben_ngoai" title="Bên ngoài" onstart="lookat(-90,10,120)" thumburl="panos/Ben_ngoai.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -398,7 +398,7 @@
 
 	</scene>
 
-	<scene name="scene_khuon_vien" title="Khuôn viên" onstart="lookat(-20,10,120)" thumburl="panos/Khuon_vien.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="">
+	<scene name="scene_khuon_vien" title="Khuôn viên" onstart="lookat(-20,10,120)" thumburl="panos/Khuon_vien.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 

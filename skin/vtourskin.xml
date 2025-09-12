@@ -144,6 +144,42 @@
 		keep="true"
 		onclick="hide_all_thumbs();" />
 
+	<hotspot name="hs_info"
+         type="text"
+		 html=""
+         ath="0"
+         atv="0"
+         width="800"
+         height="700"
+         visible="false"
+         zorder="10"
+         distorted="true"
+         depth="1000"
+         keep="true"
+         background="true"
+         bgcolor="skin_settings.design_bgcolor"
+		 css="calc:skin_settings.design_text_css + ' text-align:left; font-size:16px; font-weight:bold; line-height:1.5; padding:20px; margin-top:30px;'"
+         bgalpha="0.5" />
+	<hotspot name="header_info"
+		type="text"
+		html="THÔNG TIN ĐIỂM ĐẾN"
+		ath="0"
+		atv="0"
+		ox="0"
+		oy="-330"
+		scale="1"
+		height="32"
+		distorted="true"
+		handcursor="true"
+		zorder="11"
+		depth="1001"
+        visible="false"
+		background="false"
+		css="calc:skin_settings.design_text_css + ' text-align:left; font-size:20px; font-weight:bold; line-height:1.5; color:orange; padding:0px; margin-top:0px;'"
+		bgalpha="0.0"
+		keep="true"
+		onclick="hide_all_thumbs();" />
+
 	<!-- ensure stagescale 2x for mobile devices (regardless if mobilescale is 0.5 or 1.0) -->
 	<krpano stagescale="calc:stagescale * 2" if="stagescale LT 1.0" devices="mobile" />
 
@@ -151,6 +187,39 @@
 
 	<!-- skin_base - the base skin image -->
 	<style name="skin_base" url="calc:vtourskinxmlpath.url + skin_settings.design_skin_images" />
+
+	<action name="show_hs_info" scope="local">
+		copy(isVisible, hotspot[hs_info].visible);
+		set(hotspot[hs_info].ath, get(view.hlookat));
+		set(hotspot[header_info].ath, get(view.hlookat));
+		if(scene[get(xml.scene)].child == "",
+			set(hotspot[hs_info].html, get(data[get(scene[get(xml.scene)].doc)].content));
+			set(hotspot[hs_info].visible, calc(!isVisible));
+			set(hotspot[header_info].visible, calc(!isVisible));
+			,
+			set(hotspot[hs_info].html, get(data[get(scene[get(xml.scene)].child)].content));
+			set(hotspot[hs_info].visible, calc(!isVisible));
+			set(hotspot[header_info].visible, calc(!isVisible));
+		);
+		trace(get(hotspot[hs_info].ath));
+	</action>
+
+	<action name="handle_vrcontrollers">
+		for(i,0, count(vrcontrollers)-1,
+			if(vrcontrollers[i].hand == "left" AND vrcontrollers[i].buttons[2].pressed,
+				skin_nextscene_loop(+1);
+			);
+			if(vrcontrollers[i].hand == "left" AND vrcontrollers[i].buttons[3].pressed,
+				skin_nextscene_loop(-1);
+			);
+			if(vrcontrollers[i].hand == "right" AND vrcontrollers[i].buttons[0].pressed,
+				toggle_audio();
+			);
+			if(vrcontrollers[i].hand == "right" AND vrcontrollers[i].buttons[1].pressed,
+				toggle_audio();
+			);
+		);
+	</action>
 
 	<style name="skin_hover"
 		scalechildren="false"
@@ -771,7 +840,7 @@
 					<layer name="icon_360" capture="false" style="skin_tooltips" tooltip="Toàn cảnh" url="icons/360.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
 
-				<layer name="btn_vr" type="container" style="skin_hover" visible="false" x="" y="152" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick=" webvr.enterVR();" bgroundedge="20">
+				<layer name="btn_vr" type="container" style="skin_hover" visible="false" x="" y="152" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true" onclick="clearinterval(stereotoggle); set(display.stereo, false); set(display.stereoscale,1.0); if(webvr, webvr.enterVR(), error('WebVR not available'));" bgroundedge="20">
 					<layer name="icon_vr" capture="false" style="skin_tooltips" tooltip="Thực tế ảo" url="icons/vr.png" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center"/>
 				</layer>
 				<layer name="btn_camera" type="container" style="skin_hover" visible="false" x="" y="190" width="36" height="36" background="true"  bgcolor="0x6278a1" bgalpha="1" bgcapture="true"  bgroundedge="20" onclick="shot_without_ui();">
@@ -1010,13 +1079,12 @@
 	<include url="%VIEWER%/plugins/webvr.xml" />
 	
 	<!-- overwrite some settings from the webvr.xml for the skin integration -->
-	<plugin name="webvr" keep="true" devices="webgl"
-	        url="calc:skin_settings.webvr == true ? '%VIEWER%/plugins/webvr.js' : null"
-	        onavailable="skin_webvr_onavailable();"
-	        onentervr="skin_showloading(false); webvr_onentervr(); skin_webvr_setup(); skin_reloadscene_webvr();"
-	        onexitvr="webvr_onexitvr(); skin_webvr_setup(); skin_reloadscene_webvr();"
-	        />
-	
+	    <plugin name="webvr" keep="true" devices="html5.and.webgl" url="%VIEWER%/plugins/webvr.js"
+        onavailable="skin_webvr_onavailable();"
+		onvrcontrollerbutton="webvr_onvrcontrollerbutton();"
+        onentervr="skin_showloading(true); webvr_onentervr(); skin_webvr_setup(); skin_reloadscene_webvr(); webvr_onvrcontrollers();"
+        onexitvr="webvr_onexitvr(); skin_webvr_setup(); skin_reloadscene_webvr();" />
+
 	<!-- webvr button style (adjust to match skin style) -->
 	<style name="webvr_button_style"
 	       bgroundedge="calc:skin_settings.design_bgroundedge"
@@ -1037,10 +1105,23 @@
 	<events name="skin_webvr_and_gyro_events" keep="true"
 	        onxmlcomplete="skin_set_webvr_or_gyro_startup_view()"
 	        onresize.mobile="skin_webvr_act_as_gyro_in_portrait_mode();"
-	        onloadcomplete="delayedcall(0.5, if(webvr.isenabled AND scene.count GT 1 AND skin_settings.webvr_prev_next_hotspots, set(hotspot[skin_webvr_prev_scene].visible,true); set(hotspot[skin_webvr_next_scene].visible,true); ); );"
+	        onloadcomplete="delayedcall(0.5, if(webvr.isenabled AND scene.count GT 1 AND skin_settings.webvr_prev_next_hotspots, set(hotspot[skin_webvr_prev_scene].visible,true); set(hotspot[skin_webvr_next_scene].visible,true); set(hotspot[skin_webvr_menu].visible,true);set(hotspot[skin_webvr_sound].visible,true);); );"
 	        onviewchange=""
 	        />
 	
+	<action name="webvr_onvrcontrollerbutton" scope="local" args="vrbuttonindex, vrbuttonstate, vrcontroller">
+		if(caller.vrbuttonstate == "down" ,
+			if(caller.name == "vr_controller_r",
+				if(caller.vrbuttonindex == 4, skin_nextscene_loop(+1); );
+				if(caller.vrbuttonindex == 5, skin_nextscene_loop(-1); );
+				,
+				if(caller.vrbuttonindex == 4, show_hs_info(););
+				if(caller.vrbuttonindex == 5, toggle_audio(););
+			);
+		);
+
+	</action>
+
 	<action name="skin_vrdevice_intro" autorun="onstart" scope="local" devices="mobilevr">
 		<!-- show directly a big enterVR button -->
 		set(layer[webvr_enterbutton], 
@@ -1066,15 +1147,14 @@
 	</action>
 	
 	<action name="skin_webvr_onavailable" scope="local">
-		if(device.mobilevr == false,
-			<!-- remove the enter vr button from the webvr.xml, use the one from the skin -->
-			removelayer(webvr_enterbutton);
-		);
-		
-		<!-- update the skin buttons to add the skin vr button -->
-		skin_arrange_buttons();
-			
-		<!-- call the original onavailable event from the webvr.xml -->
+		if(webvr.isvrbrowser,
+		set(layer[webvr_enterbutton], align=center, y=0, padding='10 20',
+		css=calc(skin_settings.design_text_css + ' font-size:20px;text-align:center;'),
+		html=calc((global.title ? '[i]'+global.title+'[/i][br]' : '') + '[span
+		style="font-size:40px"]Enter VR[span]'), ); skin_hideskin(instant); ,         <!--  remove the enter vr button from the webvr.xml  -->
+		removelayer(webvr_enterbutton); 
+		);         <!--  update the skin buttons to add the skin vr button  -->
+		skin_arrange_buttons();         <!--  call the original onavailable event from the webvr.xml  --> 
 		webvr_onavailable();
 	</action>
 	
@@ -1092,6 +1172,8 @@
 			if(scene.count GT 1 AND skin_settings.webvr_prev_next_hotspots,
 				set(hotspot[skin_webvr_prev_scene].visible, true);
 				set(hotspot[skin_webvr_next_scene].visible, true);
+				set(hotspot[skin_webvr_menu].visible, true); 
+				set(hotspot[skin_webvr_sound].visible, true);
 				set(events[skin_webvr_and_gyro_events].onviewchange, skin_webvr_menu_following());
 			);
 		  ,
@@ -1099,6 +1181,8 @@
 			if(layer[webvr_rotate_to_landscape_request], tween(layer[webvr_rotate_to_landscape_request].alpha, 0.0, 0.0); );
 			set(hotspot[skin_webvr_prev_scene].visible, false);
 			set(hotspot[skin_webvr_next_scene].visible, false);
+			set(hotspot[skin_webvr_menu].visible, false); 
+			set(hotspot[skin_webvr_sound].visible, false);
 			set(events[skin_webvr_and_gyro_events].onviewchange, null);
 		);
 	</action>
@@ -1131,13 +1215,17 @@
 	<!-- VR scene switching hotspots -->
 	<style name="skin_webvr_menu_style" torigin="view" depth="1000" scale="0.625" distorted="true" ath="0" atv="45" alpha="0.5" />
 	<hotspot name="skin_webvr_prev_scene" keep="true" style="skin_base|skin_webvr_menu_style" crop="0|64|64|64"  ox="-88" onover="tween(scale,0.750);" onout="tween(scale,0.625);" vr_timeout="750" onclick="skin_nextscene_loop(-1);" visible="false" devices="webgl" />
+	<hotspot name="skin_webvr_sound" keep="true" style="skin_webvr_menu_style" url="icons/music.png" width="30" height="30" ox="-25" onover="tween(scale,1.25);" onout="tween(scale,1);" vr_timeout="750" onclick="toggle_audio();" visible="false" devices="webgl" />
+	<hotspot name="skin_webvr_menu" keep="true" style="skin_base|skin_webvr_menu_style" crop="0|128|64|64"  ox="25" onover="tween(scale,0.750);" onout="tween(scale,0.625);" vr_timeout="750" onclick="start_vr();" visible="false" devices="webgl" />
 	<hotspot name="skin_webvr_next_scene" keep="true" style="skin_base|skin_webvr_menu_style" crop="64|64|64|64" ox="+88" onover="tween(scale,0.750);" onout="tween(scale,0.625);" vr_timeout="750" onclick="skin_nextscene_loop(+1);" visible="false" devices="webgl" />
 	
 	<!-- floating/following VR hotspots -->
 	<action name="skin_webvr_menu_following" type="Javascript"><![CDATA[
 		var hs1 = krpano.get("hotspot[skin_webvr_prev_scene]");
 		var hs2 = krpano.get("hotspot[skin_webvr_next_scene]");
-		if(!hs1.hovering && !hs2.hovering)
+		var hs3 = krpano.get("hotspot[skin_webvr_menu]"); 
+		var hs4 = krpano.get("hotspot[skin_webvr_sound]");
+		if(!hs1.hovering && !hs2.hovering && !hs3.hovering && !hs4.hovering)
 		{
 			var f = 0.01;	// following speed factor
 			var h = krpano.view.hlookat;
@@ -1154,9 +1242,9 @@
 			a = 1.0 * Math.max(1.0 - 2.0*Math.sqrt(a), 0);
 			v = v + 55.0 - v*1.5;
 			hsv = hsv*(1.0 - f) + v*f;
-			hs1.ath = hs2.ath = hsh;
-			hs1.atv = hs2.atv = hsv;
-			hs1.alpha = hs2.alpha = a;
+			hs1.ath = hs2.ath = hs3.ath = hs4.ath = hsh; 
+			hs1.atv = hs2.atv = hs3.atv = hs4.atv= 35; 
+			hs1.alpha = hs2.alpha = hs3.alpha = hs4.alpha= 1; 
 		}
 	]]></action>
 	<!-- VR support -->
@@ -1403,17 +1491,12 @@
 		set(hotspot[calc(get(hsname) + '_text')].visible, true);
 		set(hotspot[calc(get(hsname) + 'bg')].visible, true);
 
-		set(hotspot[get(hsname)].atv, get(view.vlookat));
-		set(hotspot[calc(get(hsname) + '_text')].atv, get(view.vlookat));
-		set(hotspot[calc(get(hsname) + 'bg')].atv, get(view.vlookat));
 		set(hotspot[get(hsname)].ath, get(view.hlookat));
 		set(hotspot[calc(get(hsname) + '_text')].ath, get(view.hlookat));
 		set(hotspot[calc(get(hsname) + 'bg')].ath, get(view.hlookat));
 	);
 	set(hotspot[thumb_wall].visible, true);
 	set(hotspot[close_button_wall].visible, true);
-	set(hotspot[thumb_wall].atv, get(view.vlookat));
-	set(hotspot[close_button_wall].atv, get(view.vlookat));
 	set(hotspot[thumb_wall].ath, get(view.hlookat));
 	set(hotspot[close_button_wall].ath, get(view.hlookat));
 </action>
@@ -1421,9 +1504,10 @@
 	set(i, 0);
 	set(columns, 3);                  <!-- số cột của lưới thumbnails -->
 	def(global.thumbs, array);
-	copy(currentScene, scene[get(xml.scene)].doc);
+	copy(currentScene, scene[get(xml.scene)].child);
+	if(currentScene == "" or currentScene == null, copy(currentScene, scene[get(xml.scene)].doc););
 	for(set(sceneindex, 0), sceneindex LT scene.count, inc(sceneindex),
-		if(scene[get(sceneindex)].doc == currentScene,
+		if(scene[get(sceneindex)].doc == currentScene or scene[get(sceneindex)].child == currentScene,
 			copy(scname, scene[get(sceneindex)].name);
 			copy(title, scene[get(scname)].title);
 			copy(thumburl, scene[get(scname)].thumburl);
