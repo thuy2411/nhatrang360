@@ -62,6 +62,7 @@
 	<scence_array name=""></scence_array>
 
 	<set var="view_360" val="none" />
+	<set var="is_show_name_place" val="true" />
 	<set var="check_click" val="false" />
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
@@ -252,9 +253,7 @@
 	       use3dtransition="false"
 	       onclick="skin_hotspotstyle_click();"
 	       depth="1000"
-	       scale="1"
-	       onover.addevent="tween(scale,1.2);"
-	       onout.addevent="tween(scale,1);"
+	       scale="0.8"
 	       onloaded.addevent="skin_hotspotstyle_setup(); do_crop_animation(128,128,30);"
 	       />
 
@@ -416,6 +415,8 @@
 		zorder="4"
 		align="left"
 		keep="true">
+		<layer name="btn_show_list_place" x="10" style="skin_base" url="icons/next.png" visible="false" width="24" height="24" enabled="true" onclick="set(layer[btn_hide_list_place].visible, true);set(layer[btn_show_list_place].visible, false);close_place_name(true);"/>
+		<layer name="btn_hide_list_place" x="10" style="skin_base" url="icons/prev.png" width="24" height="24" enabled="true" onclick="set(layer[btn_show_list_place].visible, true);set(layer[btn_hide_list_place].visible, false);close_place_name(false);"/>
 	</layer>
 	<layer name="thumb_box" type="container" keep="true"
 			align="lefttop" x="0" y="0" width="100%" height="100%"
@@ -609,10 +610,10 @@
 			set(layer[menu_box].visible,false);
 			set(layer[icon_gogogo_off].visible,false);set(layer[icon_gogogo].visible,true);
 			set(layer[icon_gogogo],width=80,height=80); 
-			set(layer[btn_gogogo],width=80,height=80,x=60,y=30); 
+			set(layer[btn_gogogo],width=60,height=60,x=0,y=0); 
 			set(layer[icon_goback],width=50,height=50); 
 			set(layer[btn_goback],width=50,height=50,x=0,y=0);
-			set(layer[text_go_next],x=0,y=100);
+			set(layer[text_go_next],x=0,y=55);
 			,
 			set(layer[skin_title_mobile].visible,false);
 			set(layer[skin_title].visible,true);
@@ -763,21 +764,30 @@
 			</layer>
 			
 		</layer>
-		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="leftbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true"> 
+		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="leftbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true" onover="if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], width=25%, 1););if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], height=45%, 1););" onout="if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], width=15%, 1););if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], height=25%, 1);)"> 
 				<layer name="button_close" url="icons/close.png" align="righttop" x="0" y="0"	width="36" height="36"	handcursor="true" onclick="skin_showmap(false);" zorder="3"/>
-				<layer name="skin_map_container" type="container" align="rightbottom"  width="100%" height="100%" bgroundedge="get:skin_settings.design_bgroundedge" 	>
-					<!-- <layer name="skin_map" type="container" scale="1" url="" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
-						<layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();"> -->
+				<!-- <layer name="btn_zoom_out" style="skin_base" visible="true" crop="0|576|64|64" align="righttop" x="36" y="0"	width="36" height="36"	handcursor="true" onclick="if(!device.mobile AND !device.tablet,set(layer[btn_zoom_in].visible, true);set(layer[btn_zoom_out].visible, false); tween(layer[skin_map_layer].width, '100%', 0.6); tween(layer[skin_map_layer].height, '47%', 0.6););" zorder="3"/>
+				<layer name="btn_zoom_in" style="skin_base" visible="false" crop="64|576|64|64" align="righttop" x="36" y="0"	width="36" height="36"	handcursor="true" onclick="if(!device.mobile AND !device.tablet,set(layer[btn_zoom_out].visible, true);set(layer[btn_zoom_in].visible, false); tween(layer[skin_map_layer].width, '25%', 0.6); tween(layer[skin_map_layer].height, '45%', 0.6););" zorder="3"/> -->
+				<layer name="skin_map_container" type="container" align="rightbottom" width="100%" height="100%" bgroundedge="get:skin_settings.design_bgroundedge" 	>
+					<layer name="skin_map_img"
+							url="map/long-son-map.png"
+							align="center"
+							width="100%" height="100%"
+							bgbrightness="1.0" bgcontrast="1.0"
+							bgsaturate="1.0" bghue="0" bginvert="0"
+							bgsepia="0" bgblur="0"/>
+					<layer name="skin_map" type="container" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
+						<layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();">
 							<!-- <plugin name="radar"  url.html5="../plugins/radar_source.js" x="-50" y="-50" scale="0.5" heading="0.0" headingoffset="90.0" fillcolor="0x45bfe3" fillalpha="0.5" linewidth="0.0" linecolor="0xFFFFFF" linealpha="0.3" invert="false" cursor="default"/> -->
-						<!-- </layer>
-					</layer> -->
-					<layer name="skin_map" style="krpanomaps" state="closed" url="" visible="false" align="lefttop" width="100%" height="50%" x="0" y="0" zorder="1" lat="21.0285" lng="105.8542" zoom="20.0" bgalpha="0" maptype="satellite" zoombase="screen" onmapready="skin_addmapspots();">
+						</layer>
+					</layer>
+					<!-- <layer name="skin_map" style="krpanomaps" state="closed" url="" visible="false" align="lefttop" width="100%" height="100%" x="0" y="0" zorder="1" lat="21.0285" lng="105.8542" zoom="20.0" bgalpha="0" maptype="satellite" zoombase="screen" onmapready="skin_addmapspots();">
 							<maptypecontrol visible="true" align="righttop" x="5" y="5" buttonalign="v" scale.mobile="1.5" />
 							<radar visible="false" headingoffset="0" />
 							<spotstyle name="DEFAULT" url="vtourskin_mapspot.png" activeurl="vtourskin_mapspotactive.png" edge="bottom" x="-5" y="-8" scale="0.5" />
 							<layer name="skin_map_zoom_in"  style="skin_base" visible="get:skin_settings.maps_zoombuttons" crop="9|512|46|64"  align="right" x="0" y="-40" zorder="2" ondown="layer[skin_map].zoomin();  skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
 							<layer name="skin_map_zoom_out" style="skin_base" visible="get:skin_settings.maps_zoombuttons" crop="73|512|46|64" align="right" x="0" y="+40" zorder="2" ondown="layer[skin_map].zoomout(); skin_buttonglow(get(name));" onup="skin_buttonglow(null);" />
-						</layer>
+						</layer> -->
 				</layer>
 			</layer>
 		<!-- <layer name="skin_splitter_bottom" type="container" align="topleft" width="calc:skin_settings.controlbar_offset + skin_settings.controlbar_height - skin_settings.controlbar_overlap" height="96%" x="10" y="0" maskchildren="true" onloaded="skin_calc_opened_closed();" zorder="2">
@@ -892,14 +902,13 @@
 					<layer name="icon_info_circle" capture="false" style="skin_tooltips" tooltip="Thông tin địa điểm" url="icons/infoico.svg" align="center" x="0" y="0" width="36" height="100%" scale="0.7" origin="center" />
 				</layer>
 
-				<layer name="btn_map" type="container" align="lefttbottom" x="" y="60" width="50" height="50"  onover="set(layer[icon_map_off].visible, false); set(layer[icon_map].visible, true);" onout="set(layer[icon_map_off].visible, true); set(layer[icon_map].visible, false);">
+				<layer name="btn_map" type="container" align="lefttbottom" x="" y="60" width="50" height="50"  onover="set(layer[icon_map_off].visible, false); set(layer[icon_map].visible, true);" onout="set(layer[icon_map_off].visible, true); set(layer[icon_map].visible, false); skin_addcustommapspots(); skin_addcustommapspots_around();">
 					<layer name="icon_map_off" capture="false" style="skin_tooltips_left" tooltip="Bật/Tắt bản đồ" url="icons/iconmap_off.svg" align="center" x="0" y="0" width="50" height="100%" scale="1" origin="center" onclick="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap(); "/>
 					<layer name="icon_map" capture="false" style="skin_tooltips_left" tooltip="Bật/Tắt bản đồ" visible="false" url="icons/iconmap.svg" align="center" x="0" y="0" width="50" height="100%" scale="1" origin="center" onclick="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap(); " />
 				</layer>
-				<layer name="text_gogogo" capture="false" align="righttop" x="0" y="0" type="text" html="Tour tiếp theo: Tham quan Đảo &amp; Ngoại ô" width="220" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic;'" txtshadow="get:skin_settings.design_text_txtshadow"/>
-				<layer name="text_go_next" capture="false" align="righttop" x="0" y="144" type="text" html="Nhấn để chuyển tour!" width="220" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; text-decoration:underline ;font-size:16px; font-weight:bold; font-style:italic; '" txtshadow="get:skin_settings.design_text_txtshadow"/>
-				<layer name="btn_gogogo" type="container" align="righttop" x="20" y="18" width="144" height="144"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));" bgroundedge="70"  maskchildren="true">
-					<layer name="icon_gogogo" capture="false" style="skin_tooltips" url="icons/gogogo.gif" align="center" x="0" y="0" width="144" height="144" scale="1" origin="center"/>
+				<layer name="text_go_next" capture="false" align="righttop" x="0" y="60" type="text" html="Chuyển tour!" width="80" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; text-decoration:underline ;font-size:12px; font-weight:bold; font-style:italic; '" txtshadow="get:skin_settings.design_text_txtshadow"/>
+				<layer name="btn_gogogo" type="container" align="righttop" x="0" y="0" width="70" height="70"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));" bgroundedge="70"  maskchildren="true">
+					<layer name="icon_gogogo" capture="false" style="skin_tooltips" url="icons/gogogo.gif" align="center" x="0" y="0" width="70" height="70" scale="1" origin="center"/>
 				</layer>
 				<layer name="text_finish"
 					type="text"
@@ -1022,17 +1031,13 @@
 					</layer>
 				</layer>
 
-				<layer name="text_goback" capture="false" align="lefttop" x="0" y="0" type="text" visible="false"  html="Về Trang Chính" width="140" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:16px; font-weight:bold; font-style:italic;'" txtshadow="get:skin_settings.design_text_txtshadow"/>
-				<layer name="btn_goback" type="container" align="lefttop" x="20" y="18" width="100" height="100"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/', '_self'));" bgroundedge="70"  maskchildren="true">
-					<layer name="icon_goback" capture="false" style="skin_tooltips_left" tooltip="Trang Chủ" visible="true"  url="icons/logo-nhatrang.png" align="center" x="0" y="0" width="100" height="100" scale="1" origin="center" onover="set(layer[text_goback].visible,true);" onout="set(layer[text_goback].visible,false);"/>
+				<layer name="text_goback" capture="false" align="lefttop" x="0" y="0" type="text" visible="false"  html="Về Trang Chính" width="110" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; font-size:12px; font-weight:bold; font-style:italic;'" txtshadow="get:skin_settings.design_text_txtshadow"/>
+				<layer name="btn_goback" type="container" align="lefttop" x="20" y="18" width="60" height="60"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/', '_self'));" bgroundedge="70"  maskchildren="true">
+					<layer name="icon_goback" capture="false" style="skin_tooltips_left" tooltip="Trang Chủ" visible="true"  url="icons/logo-nhatrang.png" align="center" x="0" y="0" width="60" height="60" scale="1" origin="center" onover="set(layer[text_goback].visible,true);" onout="set(layer[text_goback].visible,false);"/>
 				</layer>
 		<layer name="skin_loadingtext" type="text" align="center" x="5" y="-5" html="get:skin_settings.loadingtext" visible="false" bg="false" enabled="false" css="calc:skin_settings.design_text_css + ' text-align:center; font-style:italic; font-size:22px;'" txtshadow="get:skin_settings.design_text_txtshadow" />
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
-		<layer name="btn_next_scene" type="container" align="right" width="230" height="9%" x="10" y="-100" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" background="true" bgcolor="0x000000" bgalpha="0.5" bgcapture="true" bgroundedge="10">
-			<layer name="icon_next_scene" capture="false" type="text" align="rightcenter"  url="icons/right-arrow.png" width="60" height="60" scale="0.7"/>
-			<layer name="text_next_scene" capture="false" type="text" align="leftcenter" html="" width="80%" height="18" bg="false"
-				css="text-align:center; font-size:16px; color:#FFFFFF; font-family:sans-serif; background:none" />
-		</layer>
+		<layer name="btn_next_scene" style="skin_tooltips" capture="false" type="text" align="rightcenter"  url="icons/right-arrow.png" width="60" height="60" scale="0.7" x="20" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );"/>
 		<layer name="btn_prev_container" type="container" align="bottom" width="28%" height="15%" x="-10">
 			<layer name="icon_switch_scene" capture="false" type="container" align="leftcenter" width="20%" height="100%" scale="0.7">
 				<layer name="skin_next_btn"  style="skin_base" url="icons/up-arrow.png" align="top" scale="1.0" visible="true" enabled="true" width="100%" height="60%" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );"/>
@@ -1046,7 +1051,192 @@
 		<layer name="skin_thumbborder" type="container" x="get:skin_settings.design_thumbborder_padding" y="get:skin_settings.design_thumbborder_padding" width="calc:skin_settings.thumbs_width - 2*skin_settings.design_thumbborder_padding" height="calc:skin_settings.thumbs_height - 2*skin_settings.design_thumbborder_padding" visible="false" enabled="false" align="lefttop" bgborder="get:skin_settings.design_thumbborder_bgborder" bgroundedge="get:skin_settings.design_thumbborder_bgroundedge" />
 	</layer>
 
+	<action name="skin_addcustommapspots">
+	if(device.mobile OR device.tablet,
+		calc(spotname, 'spothere');
+		addlayer(get(spotname));
+		set(layer[get(spotname)].url, skin/icons/here.png);
+		set(layer[calc(get(spotname))].visible, true);
+		set(layer[calc(get(spotname))].parent, "skin_map");
+		set(layer[calc(get(spotname))].width, 30);
+		set(layer[calc(get(spotname))].x, calc(stagewidth * get(scene[get(xml.scene)].mapx)- 5));
+		set(layer[calc(get(spotname))].y, calc(stageheight / 2 * get(scene[get(xml.scene)].mapy)- 15));
+		set(layer[calc(get(spotname))].height, 30);
+		set(layer[calc(get(spotname))].zorder, 3);
+		set(layer[calc(get(spotname))].onloaded, do_animation(120,120,10));
+	,
+		calc(spotname, 'spothere');
+		addlayer(get(spotname));
+		set(layer[get(spotname)].url, skin/icons/here.png);
+		set(layer[calc(get(spotname))].visible, true);
+		set(layer[calc(get(spotname))].parent, "skin_map");
+		set(layer[calc(get(spotname))].width, 30);
+		set(layer[calc(get(spotname))].x, calc(layer[skin_map_layer].pixelwidth * get(scene[get(xml.scene)].mapx)- 5));
+		set(layer[calc(get(spotname))].y, calc(layer[skin_map_layer].pixelheight * get(scene[get(xml.scene)].mapy)- 15));
+		set(layer[calc(get(spotname))].height, 30);
+		set(layer[calc(get(spotname))].zorder, 3);
+		set(layer[calc(get(spotname))].onloaded, do_animation(120,120,10));
+	)
+		
+	</action>
+	<action name="locate_map_hover" scope="local" args="layertoglow, layertext, istrue">
+		if(layertoglow != null,
+			if(istrue,
+				set(layer[get(layertoglow)].visible, true);
+				set(layer[get(layertext)].visible, true);
+				,
+				set(layer[get(layertoglow)].visible, false);
+				set(layer[get(layertext)].visible, false);
+			);
+		);
+	</action>
+	<action name="skin_addcustommapspots_around">
+		copy(curx, scene[get(xml.scene)].mapx);
+		copy(cury, scene[get(xml.scene)].mapy);
+		if(device.mobile OR device.tablet,
+			for(set(i,0), i LT scene.count, inc(i),
+				if(scene[get(i)].mapx AND scene[get(i)].mapy,
+					if( !(scene[get(i)].mapx == get(curx) AND scene[get(i)].mapy == get(cury)),
+						copy(spotaroundscname, scene[get(i)].name);
+						copy(spotaround, scene[get(i)].name );
+						addlayer(calc(get(spotaround)+'map'));
+						set(layer[calc(get(spotaround)+ 'map')].url, skin/icons/here1.png);
+						set(layer[calc(get(spotaround)+ 'map')].type, 'image');
+						set(layer[calc(get(spotaround)+ 'map')].visible, true);
+						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map");
+
+						set(layer[calc(get(spotaround)+ 'map')].ox, calc(calc(stagewidth) * get(scene[get(i)].mapx)));
+						set(layer[calc(get(spotaround)+ 'map')].oy, calc(calc(stageheight/2)* get(scene[get(i)].mapy)));
+						set(layer[calc(get(spotaround)+ 'map')].width, 20);
+						set(layer[calc(get(spotaround)+ 'map')].height, 20);
+						set(layer[calc(get(spotaround)+ 'map')].zorder, 3);
+						set(temp, calc('skin_loadscene(' + get(spotaroundscname) + ', ' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+ 'map')].onclick, get(temp));
+
+						set(layer[calc(get(spotaround)+ 'map')].onloaded, do_animation(120,120,10));
+
+						copy(thumburl, scene[get(i)].thumburl);
+						
+								<!-- Tạo thumbnail -->
+						addlayer(calc(get(spotaround)+'thumbmap'));
+						set(layer[calc(get(spotaround)+'thumbmap')].url, get(thumburl));
+						
+						set(layer[calc(get(spotaround)+'thumbmap')].type, 'image');
+						set(layer[calc(get(spotaround)+'thumbmap')].ox, calc(calc(stagewidth)*calc(get(scene[get(i)].mapx))-20));
+						set(layer[calc(get(spotaround)+'thumbmap')].oy, calc(calc(stageheight/2)*calc(get(scene[get(i)].mapy))-35));
+						set(layer[calc(get(spotaround)+'thumbmap')].width, 60);
+						set(layer[calc(get(spotaround)+'thumbmap')].height, 40);
+						set(layer[calc(get(spotaround)+'thumbmap')].visible, false);
+						set(layer[calc(get(spotaround)+'thumbmap')].parent, "skin_map");
+						set(layer[calc(get(spotaround)+'thumbmap')].scale, 1.0);
+						set(layer[calc(get(spotaround)+'thumbmap')].distorted, true);
+						set(layer[calc(get(spotaround)+'thumbmap')].zorder, 4);
+						set(layer[calc(get(spotaround)+'thumbmap')].keep, true);
+						
+						set(temp, calc('skin_loadscene(' + get(spotaround) + ',' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+'thumbmap')].onclick, get(temp));
+						<!-- Thêm text title -->
+						addlayer(calc(get(spotaround) + '_text'));
+						set(layer[calc(get(spotaround) + '_text')].type, text);
+						set(layer[calc(get(spotaround) + '_text')].html, get(scene[get(i)].title));
+						set(layer[calc(get(spotaround) + '_text')].css, 'text-align:center;color:#fff;font-size:10px;background:none;background-color:0x7777DD;');
+						set(layer[calc(get(spotaround) + '_text')].width, 100);
+						set(layer[calc(get(spotaround)+'_text')].visible, false);
+						set(layer[calc(get(spotaround) + '_text')].parent, "skin_map");
+						set(layer[calc(get(spotaround) + '_text')].height, 20);
+						set(layer[calc(get(spotaround) + '_text')].distorted, true);
+						set(layer[calc(get(spotaround)+'_text')].ox, calc(calc(stagewidth)*calc(get(scene[get(i)].mapx))-40));
+						set(layer[calc(get(spotaround)+'_text')].oy, calc(calc(stageheight/2)*calc(get(scene[get(i)].mapy))));
+						set(layer[calc(get(spotaround) + '_text')].keep, true);
+						set(layer[calc(get(spotaround) + '_text')].zorder, 4);
+						set(layer[calc(get(spotaround) + '_text')].background, false);
+						set(temp, calc('skin_loadscene(' + get(spotaround) + ',' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+'_text')].onclick, get(temp));
+						set(temptrue, calc('locate_map_hover("' + spotaround + 'thumbmap","' + spotaround + '_text", true);'));
+						set(tempfalse, calc('locate_map_hover("' + spotaround + 'thumbmap","' + spotaround + '_text", false);'));
+						set(layer[calc(get(spotaround)+ 'thumbmap')].onout, get(tempfalse));
+						set(layer[calc(get(spotaround)+ 'map')].onover, get(temptrue));
+						set(layer[calc(get(spotaround)+ '_text')].onout, get(tempfalse));
+					);
+				);
+			);
+			,
+			for(set(i,0), i LT scene.count, inc(i),
+				if(scene[get(i)].mapx AND scene[get(i)].mapy,
+					if( !(scene[get(i)].mapx == get(curx) AND scene[get(i)].mapy == get(cury)),
+						copy(spotaroundscname, scene[get(i)].name);
+						copy(spotaround, scene[get(i)].name );
+						addlayer(calc(get(spotaround)+'map'));
+						set(layer[calc(get(spotaround)+ 'map')].url, skin/icons/here1.png);
+						set(layer[calc(get(spotaround)+ 'map')].type, 'image');
+						set(layer[calc(get(spotaround)+ 'map')].visible, true);
+						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map");
+						set(layer[calc(get(spotaround)+ 'map')].ox, calc(calc(layer[skin_map_layer].pixelwidth -0) * get(scene[get(i)].mapx)));
+						set(layer[calc(get(spotaround)+ 'map')].oy, calc(calc(layer[skin_map_layer].pixelheight -0)* get(scene[get(i)].mapy)));
+						set(layer[calc(get(spotaround)+ 'map')].width, 20);
+						set(layer[calc(get(spotaround)+ 'map')].height, 20);
+						set(layer[calc(get(spotaround)+ 'map')].zorder, 3);
+						set(temp, calc('skin_loadscene(' + get(spotaroundscname) + ', ' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+ 'map')].onclick, get(temp));
+
+						set(layer[calc(get(spotaround)+ 'map')].onloaded, do_animation(120,120,10));
+
+						copy(thumburl, scene[get(i)].thumburl);
+						
+								<!-- Tạo thumbnail -->
+						addlayer(calc(get(spotaround)+'thumbmap'));
+						set(layer[calc(get(spotaround)+'thumbmap')].url, get(thumburl));
+						
+						set(layer[calc(get(spotaround)+'thumbmap')].type, 'image');
+						set(layer[calc(get(spotaround)+'thumbmap')].ox, -20);
+						set(layer[calc(get(spotaround)+'thumbmap')].oy, -10);
+						set(layer[calc(get(spotaround)+'thumbmap')].width, 60);
+						set(layer[calc(get(spotaround)+'thumbmap')].height, 40);
+						set(layer[calc(get(spotaround)+'thumbmap')].visible, false);
+						set(layer[calc(get(spotaround)+'thumbmap')].parent, calc(get(spotaround)+ 'map'));
+						set(layer[calc(get(spotaround)+'thumbmap')].scale, 1.0);
+						set(layer[calc(get(spotaround)+'thumbmap')].distorted, true);
+						set(layer[calc(get(spotaround)+'thumbmap')].zorder, 4);
+						set(layer[calc(get(spotaround)+'thumbmap')].keep, true);
+						
+						set(temp, calc('skin_loadscene(' + get(spotaround) + ',' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+'thumbmap')].onclick, get(temp));
+						<!-- Thêm text title -->
+						addlayer(calc(get(spotaround) + '_text'));
+						set(layer[calc(get(spotaround) + '_text')].type, text);
+						set(layer[calc(get(spotaround) + '_text')].html, get(scene[get(i)].title));
+						set(layer[calc(get(spotaround) + '_text')].css, 'text-align:center;color:#fff;font-size:10px;background:none;background-color:0x7777DD;');
+						set(layer[calc(get(spotaround) + '_text')].width, 100);
+						set(layer[calc(get(spotaround)+'_text')].visible, false);
+						set(layer[calc(get(spotaround) + '_text')].parent, calc(get(spotaround)+ 'map'));
+						set(layer[calc(get(spotaround) + '_text')].height, 20);
+						set(layer[calc(get(spotaround) + '_text')].distorted, true);
+						set(layer[calc(get(spotaround)+'_text')].ox, -40);
+						set(layer[calc(get(spotaround)+'_text')].oy, 30);
+						set(layer[calc(get(spotaround) + '_text')].keep, true);
+						set(layer[calc(get(spotaround) + '_text')].zorder, 4);
+						set(layer[calc(get(spotaround) + '_text')].background, false);
+						set(temp, calc('skin_loadscene(' + get(spotaround) + ',' + get(skin_settings.loadscene_blend) + ');'));
+						set(layer[calc(get(spotaround)+'_text')].onclick, get(temp));
+						set(temptrue, calc('locate_map_hover("' + spotaround + 'thumbmap","' + spotaround + '_text", true);'));
+						set(tempfalse, calc('locate_map_hover("' + spotaround + 'thumbmap","' + spotaround + '_text", false);'));
+						set(layer[calc(get(spotaround)+ 'thumbmap')].onout, get(tempfalse));
+						set(layer[calc(get(spotaround)+ 'map')].onover, get(temptrue));
+						set(layer[calc(get(spotaround)+ '_text')].onout, get(tempfalse));
+					);
+				);
+			);
+		)
+	</action>
 	
+	<action name="remove_thumb_map" scope="local">
+		set(i, 0);
+		for(set(i, 0), i LT scene.count, inc(i),
+			copy(spotaround, scene[get(i)].name );
+			removelayer(calc(get(spotaround) + 'thumbmap'));
+			removelayer(calc(get(spotaround) + '_text'));
+		);
+	</action>
 
 	<!-- previous/next scene buttons for the hidden skin mode -->
 	<layer name="skin_btn_prev_fs" keep="true" type="container" align="lefttop"  x="-50" width="40" height="100%" bgcapture="true" alpha="0.0" enabled="false" capture="false" zorder="2" onclick="skin_nextscene_loop(-1);" onhover="tween(alpha,1.0);" onout="tween(alpha,0.25);" ondown.touch="onhover();" onup.touch="onout();">
@@ -1355,8 +1545,24 @@
 		set(layer[thumb_list].height, calc(get(i) * 130 + 10));
 	</action>
 
+<action name="close_place_name" scope="local" args="isShow">
+	set(is_show_name_place, get(isShow));
+	txtsplit(get(menu_items), "," , items);
+	for(set(i,0), i LT items.count, inc(i),
+        txtsplit(get(items[get(i)].value), '|', item);
+        set(scene_name, get(item[0].value));
+        set(scene_title, get(item[1].value));
+        set(scene_doc, get(item[2].value));
+		if(isShow,
+			set(layer[get(scene_name)].html, get(layer[get(scene_name)].txt));
+			,
+			set(layer[get(scene_name)].html, '');
+		);
+	);
+</action>
+
 <action name="build_menu" autorun="onstart" scope="local">
-    set(layer_y,20);
+    set(layer_y, 44);
     txtsplit(get(menu_items), "," , items);
     for(set(i,0), i LT items.count, inc(i),
         txtsplit(get(items[get(i)].value), '|', item);
@@ -1368,28 +1574,33 @@
         set(layer[get(scene_name)].state, 'normal');
         set(layer[get(scene_name)].type, 'text');
         set(layer[get(scene_name)].align, 'lefttop');
-        set(layer[get(scene_name)].x, 20);
+        set(layer[get(scene_name)].x, 25);
         set(layer[get(scene_name)].keep, true);
         set(layer[get(scene_name)].doc, get(scene_doc));
         set(layer[get(scene_name)].y, get(layer_y));
         set(layer[get(scene_name)].html, get(scene_title));
         set(layer[get(scene_name)].background, false);
         set(layer[get(scene_name)].zorder, 5);
-        set(layer[get(scene_name)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
-
+        set(layer[get(scene_name)].height, 25);
+        set(layer[get(scene_name)].txt, get(scene_title));
+        set(layer[get(scene_name)].css, 'color:#ffffff; font-size:18px; padding-left:10px;');
+        set(layer[get(scene_name)].bgborder, '0,0,0,4 0xffffff');
         set(layer[get(scene_name)].onover,  "menu_item_over();");
         set(layer[get(scene_name)].onout,   "menu_item_out();");
         set(layer[get(scene_name)].onclick, "menu_item_click(true);");
-
         inc(layer_y, 40);
     );
 </action>
 <action name="menu_item_over" scope="local">
-	set(layer[get(caller.name)].css, 'color:rgb(255, 170, 255); font-size:18px; border-left:4px solid #ffcc00; padding-left:10px;');
+	set(layer[get(caller.name)].css, 'color:rgb(255, 170, 255); font-size:18px; padding-left:10px;');
+	set(layer[get(caller.name)].bgborder, '0,0,0,4 0xffcc00');
 	tween(layer[get(caller.name)].scale, 1.1, 1.0, easeOutExpo);
 	tween(layer[thumb_box].bgalpha, 0.5, 1.0, easeOutExpo);
 	set(layer[image_box].visible, true);
 	set(layer[image_demo].url, get(scene[get(caller.name)].thumburl));
+	if(!is_show_name_place,
+		set(layer[get(caller.name)].html, get(layer[get(caller.name)].txt));
+	);
 </action>
 
 <action name="menu_item_out" scope="local">
@@ -1399,10 +1610,14 @@
 		tween(layer[thumb_box].bgalpha, 0, 1.0, easeOutExpo);
 	);
     if(layer[get(caller.name)].state != 'active',
-        set(layer[get(caller.name)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
+        set(layer[get(caller.name)].css, 'color:#ffffff; font-size:18px; padding-left:10px;');
+        set(layer[get(caller.name)].bgborder, '0,0,0,4 0xffffff');
 		tween(layer[get(caller.name)].scale, 1.0, 1.1, easeOutExpo);
 		);
 	set(layer[image_box].visible, false);
+	if(!is_show_name_place,
+		set(layer[get(caller.name)].html, '');
+	);
 	</action>
 
 <action name="menu_item_click" scope="local" args="is_check">
@@ -1438,11 +1653,13 @@
         set(scene_name, get(item[2].value));
 		if(scene_name == current,
 			set(layer[get(item[0].value)].state, 'active');
-			set(layer[get(item[0].value)].css, 'color:rgb(255, 170, 255); font-size:18px; border-left:4px solid #ffcc00; padding-left:10px;');
+			set(layer[get(item[0].value)].css, 'color:rgb(255, 170, 255); font-size:18px; padding-left:10px;');
+			set(layer[get(item[0].value)].bgborder, '0,0,0,4 0xffcc00');
 		,
 			set(layer[get(item[0].value)].state, 'normal');
 			tween(layer[get(item[0].value)].scale, 1.0, 1.1, easeOutExpo);
-			set(layer[get(item[0].value)].css, 'color:#ffffff; font-size:18px; border-left:4px solid #ffffff; padding-left:10px;');
+			set(layer[get(item[0].value)].css, 'color:#ffffff; font-size:18px; padding-left:10px;');
+			set(layer[get(item[0].value)].bgborder, '0,0,0,4 0xffffff');
 		);
     );
 </action>
@@ -1478,7 +1695,7 @@
 		set(nextscenename, get(scene[get(nextscenename)].title));
 	);
 	if(nextscenename != null,
-		set(layer[text_next_scene].html, get(nextscenename));
+		set(layer[btn_next_scene].tooltip, get(nextscenename));
 	);
 </action>
 <action name="show_all_thumbs" scope="local">
@@ -1890,7 +2107,7 @@
 	<!-- skin events -->
 	<events name="skin_events" keep="true"
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
-	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene(); "
+	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene();set(layer[location_container].x, get(scene[get(xml.scene)].mapx)); set(layer[location_container].y, get(scene[get(xml.scene)].mapy)); skin_addcustommapspots(); skin_addcustommapspots_around();"
 	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio(); set_select_item(); set(layer[menu_box_mobile].visible,false);"
 	onloadcomplete="skin_showloading(false); "
 	onidle="skin_deeplinking_update_url();"
@@ -2502,7 +2719,7 @@
 
 	<action name="map_hover" scope="local" args="layertoglow">
 		if(layertoglow != null,
-		set(layer[skin_map_layer].alpha, 0.7);
+		set(layer[skin_map_layer].alpha, 1.0);
 		,
 		set(layer[skin_map_layer].alpha, 1);
 		);
