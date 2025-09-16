@@ -1906,6 +1906,21 @@
 
 	</action>
 
+	<action name="set_bg_map" scope="local">
+		if(scene[get(xml.scene)].doc == "chua-long-son",
+			set(layer[skin_map_img].url, 'skin/map/long-son-map.png'););
+		if(scene[get(xml.scene)].doc == "thap-ponagar",
+			set(layer[skin_map_img].url, 'skin/map/ponagar-map.png'););
+		if(scene[get(xml.scene)].doc == "vin-wonder",
+			set(layer[skin_map_img].url, 'skin/map/vinwonder.png'););
+		if(scene[get(xml.scene)].doc == "quang-truong",
+			set(layer[skin_map_img].url, 'skin/map/quang-truong.png'););
+		if(scene[get(xml.scene)].doc == "bai-bien",
+			set(layer[skin_map_img].url, 'skin/map/quang-truong.png'););
+		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
+			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
+	</action>
+
 	<action name="set_global" onstart="autorun" scope="local">
 		if(scene[get(xml.scene)].doc == "chua-long-son",
 			set(global.title, 'Chùa Long Sơn'));
@@ -2108,7 +2123,7 @@
 	<events name="skin_events" keep="true"
 	onxmlcomplete="set(events[skin_events].onxmlcomplete, skin_showloading(true); ); skin_showloading(true); skin_startup();"
 	onnewpano="remove_thumb_map(); skin_update_scene_infos(); skin_deeplinking_update_url();get_next_scene();set(layer[location_container].x, get(scene[get(xml.scene)].mapx)); set(layer[location_container].y, get(scene[get(xml.scene)].mapy)); skin_addcustommapspots(); skin_addcustommapspots_around();"
-	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio(); set_select_item(); set(layer[menu_box_mobile].visible,false);"
+	onnewscene="skin_updatethumbsview(true); remove_thumb_map(); set_global();hide_all_thumbs(); play_audio(); set_select_item(); set(layer[menu_box_mobile].visible,false);set_bg_map();"
 	onloadcomplete="skin_showloading(false); "
 	onidle="skin_deeplinking_update_url();"
 	onresize="skin_onresize();"
