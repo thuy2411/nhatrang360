@@ -1095,7 +1095,7 @@
 		copy(cury, scene[get(xml.scene)].mapy);
 		if(device.mobile OR device.tablet,
 			for(set(i,0), i LT scene.count, inc(i),
-				if(scene[get(i)].mapx AND scene[get(i)].mapy,
+				if(scene[get(i)].mapx AND scene[get(i)].mapy AND scene[get(i)].doc == scene[get(xml.scene)].doc,
 					if( !(scene[get(i)].mapx == get(curx) AND scene[get(i)].mapy == get(cury)),
 						copy(spotaroundscname, scene[get(i)].name);
 						copy(spotaround, scene[get(i)].name );
@@ -1162,7 +1162,7 @@
 			);
 			,
 			for(set(i,0), i LT scene.count, inc(i),
-				if(scene[get(i)].mapx AND scene[get(i)].mapy,
+				if(scene[get(i)].mapx AND scene[get(i)].mapy AND scene[get(i)].doc == scene[get(xml.scene)].doc,
 					if( !(scene[get(i)].mapx == get(curx) AND scene[get(i)].mapy == get(cury)),
 						copy(spotaroundscname, scene[get(i)].name);
 						copy(spotaround, scene[get(i)].name );
