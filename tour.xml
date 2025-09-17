@@ -908,7 +908,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_quang_truong_01" title="Trên Cao" onstart="lookat(150,50,120)" thumburl="panos/quang_truong_01.tiles/thumb.jpg" lat="12.239504272452804" lng="109.19712418193944" alt="" heading="" doc="quang-truong" child="">
+	<scene mapx="0.3" mapy="0.7" name="scene_quang_truong_01" title="Trên Cao" onstart="lookat(150,50,120)" thumburl="panos/quang_truong_01.tiles/thumb.jpg" lat="12.239504272452804" lng="109.19712418193944" alt="" heading="" doc="quang-truong" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -935,7 +935,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_quang_truong_02" title="View Biển" onstart="lookat(230,0,120)" thumburl="panos/quang_truong_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
+	<scene mapx="0.3" mapy="0.5" name="scene_quang_truong_02" title="View Biển" onstart="lookat(230,0,120)" thumburl="panos/quang_truong_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -956,7 +956,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_quang_truong_04" title="Tháp Trầm Hương 01" onstart="lookat(0,0,120)" thumburl="panos/quang_truong_04.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
+	<scene mapx="0.3" mapy="0.3" name="scene_quang_truong_04" title="Tháp Trầm Hương 01" onstart="lookat(0,0,120)" thumburl="panos/quang_truong_04.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -973,7 +973,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_quang_truong_03" title="Tháp Trầm Hương 02" onstart="lookat(230,-20,150)" thumburl="panos/quang_truong_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
+	<scene mapx="0.45" mapy="0.1" name="scene_quang_truong_03" title="Tháp Trầm Hương 02" onstart="lookat(230,-20,150)" thumburl="panos/quang_truong_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -993,7 +993,7 @@
 
 	</scene>
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_quang_truong_05" title="Ban Đêm" onstart="lookat(100,50,120)" thumburl="panos/quang_truong_05.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child=""> 
+	<scene mapx="0.8" mapy="0.1" name="scene_quang_truong_05" title="Ban Đêm" onstart="lookat(100,50,120)" thumburl="panos/quang_truong_05.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="quang-truong" child=""> 
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -1012,7 +1012,7 @@
 
 	</scene>
 
-	<scene mapx="0.7" mapy="0.7" name="scene_bai_bien_tran_phu_02" title="Bờ Biển 01" onstart="lookat(220,0,120)" thumburl="panos/bai_bien_tran_phu_02.tiles/thumb.jpg" lat="12.225288981806237" lng="109.20196205276739" alt="" heading="" doc="bai-bien" child="">
+	<scene mapx="0.7" mapy="0.1" name="scene_bai_bien_tran_phu_02" title="Bờ Biển 01" onstart="lookat(220,0,120)" thumburl="panos/bai_bien_tran_phu_02.tiles/thumb.jpg" lat="12.225288981806237" lng="109.20196205276739" alt="" heading="" doc="bai-bien" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -1029,7 +1029,7 @@
 
 	</scene>
 
-	<scene mapx="0.7" mapy="0.28" name="scene_bai_bien_tran_phu_01" title="Bờ Biển 02" onstart="lookat(-110,-15,120)" thumburl="panos/bai_bien_tran_phu_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="bai-bien" child="">
+	<scene mapx="0.7" mapy="0.8" name="scene_bai_bien_tran_phu_01" title="Bờ Biển 02" onstart="lookat(-110,-15,120)" thumburl="panos/bai_bien_tran_phu_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="bai-bien" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
