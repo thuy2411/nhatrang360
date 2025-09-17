@@ -403,7 +403,7 @@
 
 	</scene>
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_ben_ngoai" title="Bên ngoài" onstart="lookat(-90,10,120)" thumburl="panos/Ben_ngoai.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
+	<scene mapx="0.8" mapy="0.85" name="scene_ben_ngoai" title="Bên ngoài" onstart="lookat(-90,10,120)" thumburl="panos/Ben_ngoai.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -424,7 +424,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khuon_vien" title="Khuôn viên" onstart="lookat(-20,10,120)" thumburl="panos/Khuon_vien.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
+	<scene mapx="0.82" mapy="0.7" name="scene_khuon_vien" title="Khuôn viên" onstart="lookat(-20,10,120)" thumburl="panos/Khuon_vien.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vien-hai-duong-hoc">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -441,7 +441,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_2" title="Khu trưng bày hóa thạch" onstart="lookat(-50,0,120)" thumburl="panos/Khu_trung_bay_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-hoa-thach">
+	<scene mapx="0.8" mapy="0.52" name="scene_khu_trung_bay_2" title="Khu trưng bày hóa thạch" onstart="lookat(-50,0,120)" thumburl="panos/Khu_trung_bay_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-hoa-thach">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -458,7 +458,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_3" title="Khu trưng bày hóa thạch" onstart="lookat(-85,0,130)" thumburl="panos/Khu_trung_bay_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-hoa-thach">
+	<scene mapx="0.8" mapy="0.52" name="scene_khu_trung_bay_3" title="Khu trưng bày hóa thạch" onstart="lookat(-85,0,130)" thumburl="panos/Khu_trung_bay_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-hoa-thach">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -492,7 +492,7 @@
 
 	</scene> -->
 
-	<scene mapx="0.56" mapy="0.28" name="scene_he_sinh_thai_rung_3" title="Vườn sinh thái ven biển" onstart="lookat(0,0,120)" thumburl="panos/He_sinh_thai_rung_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
+	<scene mapx="0.53" mapy="0.37" name="scene_he_sinh_thai_rung_3" title="Vườn sinh thái ven biển" onstart="lookat(0,0,120)" thumburl="panos/He_sinh_thai_rung_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -509,7 +509,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_he_sinh_thai_rung_6" title="Vườn sinh thái ven biển" onstart="lookat(-70,0,120)" thumburl="panos/He_sinh_thai_rung_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
+	<scene mapx="0.53" mapy="0.37" name="scene_he_sinh_thai_rung_6" title="Vườn sinh thái ven biển" onstart="lookat(-70,0,120)" thumburl="panos/He_sinh_thai_rung_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="vuon-ven-bien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -526,7 +526,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_view_bien_5" title="View biển" onstart="lookat(-80,0,120)" thumburl="panos/View_bien_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="cau-cang-nho">
+	<scene mapx="0.6" mapy="0.08" name="scene_view_bien_5" title="View biển" onstart="lookat(-80,0,120)" thumburl="panos/View_bien_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="cau-cang-nho">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -543,7 +543,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_view_bien_6" title="View biển" onstart="lookat(-150,0,120)" thumburl="panos/View_bien_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="cau-cang-nho">
+	<scene mapx="0.6" mapy="0.08" name="scene_view_bien_6" title="View biển" onstart="lookat(-150,0,120)" thumburl="panos/View_bien_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="cau-cang-nho">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -560,7 +560,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_ho_ca_4" title="Hồ cá" onstart="lookat(-80,10,120)" thumburl="panos/Ho_ca_4.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
+	<scene mapx="0.15" mapy="0.23" name="scene_ho_ca_4" title="Hồ cá" onstart="lookat(-80,10,120)" thumburl="panos/Ho_ca_4.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -577,7 +577,7 @@
 
 	</scene>
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_ho_nuoi_rua_1" title="Hồ nuôi rùa" onstart="lookat(80,0,120)" thumburl="panos/Ho_nuoi_rua_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
+	<scene mapx="0.15" mapy="0.23" name="scene_ho_nuoi_rua_1" title="Hồ nuôi rùa" onstart="lookat(80,0,120)" thumburl="panos/Ho_nuoi_rua_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-ngoai-troi">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -594,7 +594,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_tai_nguyen_hs_ts_2" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-90,0,120)" thumburl="panos/Tai_nguyen_HS_TS_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
+	<scene mapx="0.18" mapy="0.57" name="scene_tai_nguyen_hs_ts_2" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-90,0,120)" thumburl="panos/Tai_nguyen_HS_TS_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -611,7 +611,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_tai_nguyen_hs_ts_3" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-90,0,120)" thumburl="panos/Tai_nguyen_HS_TS_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
+	<scene mapx="0.18" mapy="0.57" name="scene_tai_nguyen_hs_ts_3" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-90,0,120)" thumburl="panos/Tai_nguyen_HS_TS_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -628,7 +628,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_tai_nguyen_hs_ts_5" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-110,0,120)" thumburl="panos/Tai_nguyen_HS_TS_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
+	<scene mapx="0.18" mapy="0.57" name="scene_tai_nguyen_hs_ts_5" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-110,0,120)" thumburl="panos/Tai_nguyen_HS_TS_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -645,7 +645,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_tai_nguyen_hs_ts_7" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-100,0,120)" thumburl="panos/Tai_nguyen_HS_TS_7.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
+	<scene mapx="0.18" mapy="0.57" name="scene_tai_nguyen_hs_ts_7" title="Tài nguyên Hoàng Sa - Trường Sa" onstart="lookat(-100,0,120)" thumburl="panos/Tai_nguyen_HS_TS_7.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-be-kinh">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -662,7 +662,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_2(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-90,10,120)" thumburl="panos/Khu_trung_bay_T1_2(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_2(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-90,10,120)" thumburl="panos/Khu_trung_bay_T1_2(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -679,7 +679,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_3(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-140,10,120)" thumburl="panos/Khu_trung_bay_T1_3(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_3(1)" title="Khu trưng bày Tầng 1" onstart="lookat(-140,10,120)" thumburl="panos/Khu_trung_bay_T1_3(1).tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -696,7 +696,7 @@
 
 	</scene>
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_4" title="Khu trưng bày Tầng 1" onstart="lookat(-90,0,120)" thumburl="panos/Khu_trung_bay_T1_4.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_4" title="Khu trưng bày Tầng 1" onstart="lookat(-90,0,120)" thumburl="panos/Khu_trung_bay_T1_4.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -713,7 +713,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_5" title="Khu trưng bày Tầng 1" onstart="lookat(180,10,120)" thumburl="panos/Khu_trung_bay_T1_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_5" title="Khu trưng bày Tầng 1" onstart="lookat(180,10,120)" thumburl="panos/Khu_trung_bay_T1_5.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -730,7 +730,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_6" title="Khu trưng bày Tầng 1" onstart="lookat(-50,10,120)" thumburl="panos/Khu_trung_bay_T1_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_6" title="Khu trưng bày Tầng 1" onstart="lookat(-50,10,120)" thumburl="panos/Khu_trung_bay_T1_6.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -747,7 +747,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t1_3" title="Khu trưng bày Tầng 2" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T1_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t1_3" title="Khu trưng bày Tầng 2" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T1_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -764,7 +764,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t2_1" title="Khu trưng bày Tầng 2" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T2_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t2_1" title="Khu trưng bày Tầng 2" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T2_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -781,7 +781,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_khu_trung_bay_t3_1" title="Khu trưng bày Tầng 3" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T3_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
+	<scene mapx="0.55" mapy="0.75" name="scene_khu_trung_bay_t3_1" title="Khu trưng bày Tầng 3" onstart="lookat(0,0,120)" thumburl="panos/Khu_trung_bay_T3_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="vien-hai-duong-hoc" child="khu-thu-vien">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -800,7 +800,7 @@
 		<hotspot name="spot1786460417textline" style="poi_line" ath="5" atv="-22.589"/>
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_vinpearl_land_01" title="Toàn Cảnh 01" onstart="lookat(30,20,120)" thumburl="panos/vinpearl_land_01.tiles/thumb.jpg" lat="12.217215661733938" lng="109.24086106659564" alt="" heading="" doc="vin-wonder" child="">
+	<scene mapx="0.4" mapy="0.5" name="scene_vinpearl_land_01" title="Toàn Cảnh 01" onstart="lookat(30,20,120)" thumburl="panos/vinpearl_land_01.tiles/thumb.jpg" lat="12.217215661733938" lng="109.24086106659564" alt="" heading="" doc="vin-wonder" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -824,7 +824,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_vinpearl_land_02" title="Toàn Cảnh 02" onstart="lookat(-20,20,140)" thumburl="panos/vinpearl_land_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+	<scene mapx="0.8" mapy="0.33" name="scene_vinpearl_land_02" title="Toàn Cảnh 02" onstart="lookat(-20,20,140)" thumburl="panos/vinpearl_land_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -842,7 +842,7 @@
 
 	</scene>
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_vinpearl_land_05" title="Phía Trên" onstart="lookat(40,10,120)" thumburl="panos/vinpearl_land_05.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+	<scene mapx="0.17" mapy="0.28" name="scene_vinpearl_land_05" title="Phía Trên" onstart="lookat(40,10,120)" thumburl="panos/vinpearl_land_05.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -868,7 +868,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_vinpearl_land_03" title="Khu Bể Bơi" onstart="lookat(30,0,120)" thumburl="panos/vinpearl_land_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+	<scene mapx="0.23" mapy="0.8" name="scene_vinpearl_land_03" title="Khu Bể Bơi" onstart="lookat(30,0,120)" thumburl="panos/vinpearl_land_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -887,7 +887,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_vinpearl_land_04" title="Khu Đu Quay" onstart="lookat(120,0,120)" thumburl="panos/vinpearl_land_04.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+	<scene mapx="0.8" mapy="0.7" name="scene_vinpearl_land_04" title="Khu Đu Quay" onstart="lookat(120,0,120)" thumburl="panos/vinpearl_land_04.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
