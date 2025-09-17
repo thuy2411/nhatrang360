@@ -2817,7 +2817,7 @@
 
 	<action name="skin_showmap" scope="local" args="show">
 		if(show == null, 
-			if(layer[skin_map].state == 'closed'
+			if(layer[skin_map_img].state == 'closed'
 				, 
 				set(show,true); 
 				if(device.mobile OR device.tablet,
@@ -2827,8 +2827,8 @@
 					set(layer[skin_map_layer].height, 50%);
 					set(layer[skin_map_container].width, 100%);
 					set(layer[skin_map_container].height, 100%);
-					set(layer[skin_map].width, 100%);
-					set(layer[skin_map].height, 100%);
+					<!-- set(layer[skin_map_img].width, 100%); -->
+					<!-- set(layer[skin_map_img].height, 100%); -->
 					set(layer[skin_map_layer].alpha, 1);
 
 				)
@@ -2839,19 +2839,19 @@
 		if(show,
 			skin_load_maps_plugin();
 			tween(layer[skin_thumbs_container].alpha, 0.0, 0.25, default, set(layer[skin_thumbs_container].visible,false));
-			set(layer[skin_map].visible, true);
-			tween(layer[skin_map].alpha, 1.0, 0.25);
-			set(layer[skin_map].state, 'opened');
+			set(layer[skin_map_img].visible, true);
+			tween(layer[skin_map_img].alpha, 1.0, 0.25);
+			set(layer[skin_map_img].state, 'opened');
 			calc(hh, area.pixelheight - skin_settings.controlbar_offset - layer[skin_control_bar].height + 32);
-			calc(layer[skin_map].height, hh - skin_settings.controlbar_overlap);
+			<!-- calc(layer[skin_map_img].height, hh - skin_settings.controlbar_overlap); -->
 			tween(layer[skin_map_layer].y, 0);
 		  ,
-		  	if(layer[skin_map].state != 'closed',
-				set(layer[skin_map].state, 'closed');
-				tween(layer[skin_map].alpha, 0.0, 0.5, easeOutQuint);
-				tween(layer[skin_map_layer].y, calc(- area.pixelheight / 2-50), 0.5, easeOutQuint, set(layer[skin_map].visible,false) );
+		  	if(layer[skin_map_img].state != 'closed',
+				set(layer[skin_map_img].state, 'closed');
+				tween(layer[skin_map_img].alpha, 0.0, 0.5, easeOutQuint);
+				tween(layer[skin_map_layer].y, calc(- area.pixelheight / 2-50), 0.5, easeOutQuint, set(layer[skin_map_img].visible,false) );
 				if(device.mobile OR device.tablet,
-					tween(layer[skin_map_layer].y, calc(- area.pixelheight -100), 0.5, easeOutQuint, set(layer[skin_map].visible,false) );
+					tween(layer[skin_map_layer].y, calc(- area.pixelheight -100), 0.5, easeOutQuint, set(layer[skin_map_img].visible,false) );
 				)
 				
 			);
