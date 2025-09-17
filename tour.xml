@@ -71,7 +71,7 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-	<scene mapx="0.77" mapy="0.35" name="scene_nha_trang_tren_cao" title="Nha-Trang-tren-cao" onstart="" thumburl="panos/Nha_Trang_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="" >
+	<scene mapx="0.77" mapy="0.35" name="scene_nha_trang_tren_cao" title="Tổng Quan" onstart="" thumburl="panos/Nha_Trang_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
