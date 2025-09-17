@@ -71,7 +71,7 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-	<scene mapx="0.56" mapy="0.28" name="scene_nha_trang_tren_cao" title="Nha-Trang-tren-cao" onstart="" thumburl="panos/Nha_Trang_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="" >
+	<scene mapx="0.77" mapy="0.35" name="scene_nha_trang_tren_cao" title="Nha-Trang-tren-cao" onstart="" thumburl="panos/Nha_Trang_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -97,7 +97,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_chua_long_son_01" title="Trên Cao" onstart="lookat(0,30,120)" thumburl="panos/chua_long_son_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
+	<scene mapx="0.77" mapy="0.35" name="scene_chua_long_son_01" title="Trên Cao" onstart="lookat(0,30,120)" thumburl="panos/chua_long_son_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -116,7 +116,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_chua_long_son_02" title="Tượng Phật" onstart="lookat(0,-20,120)" thumburl="panos/chua_long_son_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
+	<scene mapx="0.45" mapy="0.27" name="scene_chua_long_son_02" title="Tượng Phật" onstart="lookat(0,-20,120)" thumburl="panos/chua_long_son_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -136,7 +136,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_chua_long_son_03" title="Chính Điện" onstart="lookat(0,-20,120)" thumburl="panos/chua_long_son_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
+	<scene mapx="0.3" mapy="0.67" name="scene_chua_long_son_03" title="Chính Điện" onstart="lookat(0,-20,120)" thumburl="panos/chua_long_son_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="chua-long-son" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -182,7 +182,7 @@
 
 	</scene> -->
 	
-	<scene mapx="0.56" mapy="0.28" name="scene_mat_tien" title="Cổng Vào" onstart="lookat(0,0,120)" thumburl="panos/mat_tien.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.36" mapy="0.92" name="scene_mat_tien" title="Cổng Vào" onstart="lookat(0,0,120)" thumburl="panos/mat_tien.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -218,7 +218,7 @@
 
 	</scene> -->
 
-	<scene mapx="0.56" mapy="0.28" name="scene_tien_dinh" title="Tiền Đình" onstart="lookat(-65,0,120)" thumburl="panos/tien_dinh.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.36" mapy="0.78" name="scene_tien_dinh" title="Tiền Đình" onstart="lookat(-65,0,120)" thumburl="panos/tien_dinh.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -235,7 +235,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_duong_len_thap" title="Đường Lên Tháp" onstart="lookat(-100,0,120)" thumburl="panos/duong_len_thap.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.22" mapy="0.7" name="scene_duong_len_thap" title="Đường Lên Tháp" onstart="lookat(-100,0,120)" thumburl="panos/duong_len_thap.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -252,7 +252,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_thap_nam" title="Tháp Nam" onstart="lookat(0,0,120)" thumburl="panos/thap_nam.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.16" mapy="0.6" name="scene_thap_nam" title="Tháp Nam" onstart="lookat(0,0,120)" thumburl="panos/thap_nam.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -271,7 +271,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_thap_chinh" title="Tháp Bà Ponagar" onstart="lookat(0,-10,140)" thumburl="panos/thap_chinh.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.58" mapy="0.6" name="scene_thap_chinh" title="Tháp Bà Ponagar" onstart="lookat(0,-10,140)" thumburl="panos/thap_chinh.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -290,7 +290,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_thap_tay_bac" title="Tháp Tây Bắc" onstart="lookat(0,0,120)" thumburl="panos/thap_tay_bac.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.36" mapy="0.47" name="scene_thap_tay_bac" title="Tháp Tây Bắc" onstart="lookat(0,0,120)" thumburl="panos/thap_tay_bac.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -307,7 +307,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_phia_sau_den" title="Phía Sau Khu Tháp Đền" onstart="lookat(-120,0,120)" thumburl="panos/phia_sau_den.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.35" mapy="0.28" name="scene_phia_sau_den" title="Phía Sau Khu Tháp Đền" onstart="lookat(-120,0,120)" thumburl="panos/phia_sau_den.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -342,7 +342,7 @@
 
 	</scene> -->
 
-	<scene mapx="0.56" mapy="0.28" name="scene_trung_bay_01" title="Phòng Trưng Bày 01" onstart="lookat(0,0,120)" thumburl="panos/trung_bay_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.35" mapy="0.22" name="scene_trung_bay_01" title="Phòng Trưng Bày 01" onstart="lookat(0,0,120)" thumburl="panos/trung_bay_01.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -360,7 +360,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_trung_bay_02" title="Phòng Trưng Bày 02" onstart="lookat(0,-10,120)" thumburl="panos/trung_bay_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.19" mapy="0.13" name="scene_trung_bay_02" title="Phòng Trưng Bày 02" onstart="lookat(0,-10,120)" thumburl="panos/trung_bay_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -380,7 +380,7 @@
 
 	</scene>
 
-	<scene mapx="0.56" mapy="0.28" name="scene_trung_bay_03" title="Phòng Trưng Bày 03" onstart="lookat(10,0,120)" thumburl="panos/trung_bay_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
+	<scene mapx="0.52" mapy="0.13" name="scene_trung_bay_03" title="Phòng Trưng Bày 03" onstart="lookat(10,0,120)" thumburl="panos/trung_bay_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="thap-ponagar" child="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
