@@ -775,12 +775,17 @@
 							width="100%" height="100%"
 							bgbrightness="1.0" bgcontrast="1.0"
 							bgsaturate="1.0" bghue="0" bginvert="0"
-							bgsepia="0" bgblur="0"/>
-					<layer name="skin_map" type="container" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();">
+							bgsepia="0" bgblur="0" onmapready="skin_addcustommapspots_around();">
 						<layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();">
-							<!-- <plugin name="radar"  url.html5="../plugins/radar_source.js" x="-50" y="-50" scale="0.5" heading="0.0" headingoffset="90.0" fillcolor="0x45bfe3" fillalpha="0.5" linewidth="0.0" linecolor="0xFFFFFF" linealpha="0.3" invert="false" cursor="default"/> -->
 						</layer>
+							
 					</layer>
+
+					<!-- <layer name="skin_map" type="container" visible="false" align="center" width="100%" height="100%" x="0" y="0" zorder="1" alpha="0.05" cursor="default" onmapready="skin_addcustommapspots_around();"> -->
+						<!-- <layer name="location_container" type="container" visible="true" width="10%" height="10%"  zorder="2"  onmapready="skin_addcustommapspots();"> -->
+							<!-- <plugin name="radar"  url.html5="../plugins/radar_source.js" x="-50" y="-50" scale="0.5" heading="0.0" headingoffset="90.0" fillcolor="0x45bfe3" fillalpha="0.5" linewidth="0.0" linecolor="0xFFFFFF" linealpha="0.3" invert="false" cursor="default"/> -->
+						<!-- </layer> -->
+					<!-- </layer> -->
 					<!-- <layer name="skin_map" style="krpanomaps" state="closed" url="" visible="false" align="lefttop" width="100%" height="100%" x="0" y="0" zorder="1" lat="21.0285" lng="105.8542" zoom="20.0" bgalpha="0" maptype="satellite" zoombase="screen" onmapready="skin_addmapspots();">
 							<maptypecontrol visible="true" align="righttop" x="5" y="5" buttonalign="v" scale.mobile="1.5" />
 							<radar visible="false" headingoffset="0" />
@@ -1057,7 +1062,7 @@
 		addlayer(get(spotname));
 		set(layer[get(spotname)].url, skin/icons/here.png);
 		set(layer[calc(get(spotname))].visible, true);
-		set(layer[calc(get(spotname))].parent, "skin_map");
+		set(layer[calc(get(spotname))].parent, "skin_map_container");
 		set(layer[calc(get(spotname))].width, 30);
 		set(layer[calc(get(spotname))].x, calc(stagewidth * get(scene[get(xml.scene)].mapx)- 5));
 		set(layer[calc(get(spotname))].y, calc(stageheight / 2 * get(scene[get(xml.scene)].mapy)- 15));
@@ -1069,7 +1074,7 @@
 		addlayer(get(spotname));
 		set(layer[get(spotname)].url, skin/icons/here.png);
 		set(layer[calc(get(spotname))].visible, true);
-		set(layer[calc(get(spotname))].parent, "skin_map");
+		set(layer[calc(get(spotname))].parent, "skin_map_container");
 		set(layer[calc(get(spotname))].width, 30);
 		set(layer[calc(get(spotname))].x, calc(layer[skin_map_layer].pixelwidth * get(scene[get(xml.scene)].mapx)- 5));
 		set(layer[calc(get(spotname))].y, calc(layer[skin_map_layer].pixelheight * get(scene[get(xml.scene)].mapy)- 15));
@@ -1103,7 +1108,7 @@
 						set(layer[calc(get(spotaround)+ 'map')].url, skin/icons/here1.png);
 						set(layer[calc(get(spotaround)+ 'map')].type, 'image');
 						set(layer[calc(get(spotaround)+ 'map')].visible, true);
-						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map");
+						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map_container");
 
 						set(layer[calc(get(spotaround)+ 'map')].ox, calc(calc(stagewidth) * get(scene[get(i)].mapx)));
 						set(layer[calc(get(spotaround)+ 'map')].oy, calc(calc(stageheight/2)* get(scene[get(i)].mapy)));
@@ -1127,7 +1132,7 @@
 						set(layer[calc(get(spotaround)+'thumbmap')].width, 60);
 						set(layer[calc(get(spotaround)+'thumbmap')].height, 40);
 						set(layer[calc(get(spotaround)+'thumbmap')].visible, false);
-						set(layer[calc(get(spotaround)+'thumbmap')].parent, "skin_map");
+						set(layer[calc(get(spotaround)+'thumbmap')].parent, "skin_map_container");
 						set(layer[calc(get(spotaround)+'thumbmap')].scale, 1.0);
 						set(layer[calc(get(spotaround)+'thumbmap')].distorted, true);
 						set(layer[calc(get(spotaround)+'thumbmap')].zorder, 4);
@@ -1142,7 +1147,7 @@
 						set(layer[calc(get(spotaround) + '_text')].css, 'text-align:center;color:#fff;font-size:10px;background:none;background-color:0x7777DD;');
 						set(layer[calc(get(spotaround) + '_text')].width, 100);
 						set(layer[calc(get(spotaround)+'_text')].visible, false);
-						set(layer[calc(get(spotaround) + '_text')].parent, "skin_map");
+						set(layer[calc(get(spotaround) + '_text')].parent, "skin_map_container");
 						set(layer[calc(get(spotaround) + '_text')].height, 20);
 						set(layer[calc(get(spotaround) + '_text')].distorted, true);
 						set(layer[calc(get(spotaround)+'_text')].ox, calc(calc(stagewidth)*calc(get(scene[get(i)].mapx))-40));
@@ -1170,7 +1175,7 @@
 						set(layer[calc(get(spotaround)+ 'map')].url, skin/icons/here1.png);
 						set(layer[calc(get(spotaround)+ 'map')].type, 'image');
 						set(layer[calc(get(spotaround)+ 'map')].visible, true);
-						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map");
+						set(layer[calc(get(spotaround)+ 'map')].parent, "skin_map_container");
 						set(layer[calc(get(spotaround)+ 'map')].ox, calc(calc(layer[skin_map_layer].pixelwidth -0) * get(scene[get(i)].mapx)));
 						set(layer[calc(get(spotaround)+ 'map')].oy, calc(calc(layer[skin_map_layer].pixelheight -0)* get(scene[get(i)].mapy)));
 						set(layer[calc(get(spotaround)+ 'map')].width, 20);
