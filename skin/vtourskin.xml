@@ -764,7 +764,9 @@
 			</layer>
 			
 		</layer>
-		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="leftbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true" onover="if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], width=25%, 1););if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], height=45%, 1););" onout="if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], width=15%, 1););if(layer[btn_zoom_out].visible, tween(layer[skin_map_layer], height=25%, 1);)"> 
+		<layer name="skin_map_layer" style="map_hover" type="container" visible="false" align="leftbottom" width="25%" alpha="0.7" height="45%" x="0" y="110" y_offset="get:skin_settings.controlbar_overlap" accuracy="1" bgalpha="get:skin_settings.design_bgalpha" bgcolor="get:skin_settings.design_bgcolor" bgborder="get:skin_settings.design_bgborder" bgroundedge="get:skin_settings.design_bgroundedge" bgshadow="get:skin_settings.design_bgshadow" maskchildren="true" 
+		onover="  tween(layer[skin_map_layer].width,  '25%', 0.5, default);tween(layer[skin_map_layer].height, '45%', 0.5, default, tween_hotspot() ); " 
+		onout="tween(layer[skin_map_layer].width,  '15%', 0.5, default);tween(layer[skin_map_layer].height, '25%', 0.5, default, tween_hotspot() ); "> 
 				<layer name="button_close" url="icons/close.png" align="righttop" x="0" y="0"	width="36" height="36"	handcursor="true" onclick="skin_showmap(false);" zorder="3"/>
 				<!-- <layer name="btn_zoom_out" style="skin_base" visible="true" crop="0|576|64|64" align="righttop" x="36" y="0"	width="36" height="36"	handcursor="true" onclick="if(!device.mobile AND !device.tablet,set(layer[btn_zoom_in].visible, true);set(layer[btn_zoom_out].visible, false); tween(layer[skin_map_layer].width, '100%', 0.6); tween(layer[skin_map_layer].height, '47%', 0.6););" zorder="3"/>
 				<layer name="btn_zoom_in" style="skin_base" visible="false" crop="64|576|64|64" align="righttop" x="36" y="0"	width="36" height="36"	handcursor="true" onclick="if(!device.mobile AND !device.tablet,set(layer[btn_zoom_out].visible, true);set(layer[btn_zoom_in].visible, false); tween(layer[skin_map_layer].width, '25%', 0.6); tween(layer[skin_map_layer].height, '45%', 0.6););" zorder="3"/> -->
@@ -1084,6 +1086,28 @@
 	)
 		
 	</action>
+
+	<action name="tween_hotspot" scope="local" >
+		calc(spotname, 'spothere');
+		tween(layer[spothere].x,  calc(layer[skin_map_layer].pixelwidth * get(scene[get(xml.scene)].mapx)- 5), 0.5);
+		tween(layer[spothere].y, calc(layer[skin_map_layer].pixelheight * get(scene[get(xml.scene)].mapy)- 15), 0.5);
+
+		copy(curx, scene[get(xml.scene)].mapx);
+		copy(cury, scene[get(xml.scene)].mapy);
+
+		for(set(i,0), i LT scene.count, inc(i),
+				if(scene[get(i)].mapx AND scene[get(i)].mapy AND scene[get(i)].doc == scene[get(xml.scene)].doc,
+					if( !(scene[get(i)].mapx == get(curx) AND scene[get(i)].mapy == get(cury)),
+						copy(spotaroundscname, scene[get(i)].name);
+						copy(spotaround, scene[get(i)].name );
+						tween(layer[calc(get(spotaround)+ 'map')].ox, calc(calc(layer[skin_map_layer].pixelwidth -0) * get(scene[get(i)].mapx)), 0.5);
+						tween(layer[calc(get(spotaround)+ 'map')].oy, calc(calc(layer[skin_map_layer].pixelheight -0)* get(scene[get(i)].mapy)), 0.5);
+					);
+				);
+			);
+
+	</action>
+
 	<action name="locate_map_hover" scope="local" args="layertoglow, layertext, istrue">
 		if(layertoglow != null,
 			if(istrue,
