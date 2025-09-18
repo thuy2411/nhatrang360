@@ -67,8 +67,8 @@
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
 	<set var="idle_enabled" val="true" />
-	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
-	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_quang_truong_04|Quảng Trường 2-4|quang-truong,scene_bai_bien_tran_phu_01|Bãi Biển Trần Phú|bai-bien'" />
+	<set var="menu_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai_hc|Hòn Chồng - Hòn Vợ|hon-chong,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_qt_bentrai|Quảng Trường 2-4|quang-truong,scene_bb_bai_3|Bãi Biển Trần Phú|bai-bien'" />
+	<set var="menu_mobile_items" val="'scene_chua_long_son_01|Chùa Long Sơn|chua-long-son,scene_mat_tien|Tháp Bà Ponagar|thap-ponagar,scene_ben_ngoai|Viện Hải Dương Học|vien-hai-duong-hoc,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_qt_bentrai|Quảng Trường 2-4|quang-truong,scene_bb_bai_3|Bãi Biển Trần Phú|bai-bien'" />
 	
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
