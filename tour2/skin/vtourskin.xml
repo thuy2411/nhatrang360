@@ -915,7 +915,7 @@
 					<layer name="icon_map" capture="false" style="skin_tooltips_left" tooltip="Bật/Tắt bản đồ" visible="false" url="icons/iconmap.svg" align="center" x="0" y="0" width="50" height="100%" scale="1" origin="center" onclick="set(layer[skin_map_layer].visible,true); skin_showthumbs(false); skin_showmap(); " />
 				</layer>
 				<layer name="text_go_next" capture="false" align="righttop" x="0" y="60" type="text" html="Chuyển tour!" width="80" height="144" scale="1" bgalpha="0" origin="center" css="calc:skin_settings.design_text_css + ' text-align:center; text-decoration:underline ;font-size:12px; font-weight:bold; font-style:italic; '" txtshadow="get:skin_settings.design_text_txtshadow"/>
-				<layer name="btn_gogogo" type="container" align="righttop" x="0" y="0" width="70" height="70"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));" bgroundedge="70"  maskchildren="true">
+				<layer name="btn_gogogo" type="container" align="righttop" x="0" y="0" width="70" height="70"  bgcapture="true" onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-1/', '_self'));" bgroundedge="70"  maskchildren="true">
 					<layer name="icon_gogogo" capture="false" style="skin_tooltips" url="icons/gogogo.gif" align="center" x="0" y="0" width="70" height="70" scale="1" origin="center"/>
 				</layer>
 				<layer name="text_finish"
@@ -996,7 +996,7 @@
 							bgcolor="0x22C55E" bgalpha="1.0"
 							css="color:#FFFFFF; font-size:20px; font-weight:bold; text-align:center; line-height:50px; font-family: Arial, sans-serif; padding-right:20px;"
 							html="Bắt Đầu"
-							onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-2/', '_self'));"
+							onclick="js(openHref('http://vh360.com.vn/nha-trang/nha-trang-1/', '_self'));"
 					>
 						<layer name="btn_explore_icon"
 							type="image"
