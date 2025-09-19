@@ -1950,7 +1950,7 @@
 		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
 			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
 		if(scene[get(xml.scene)].doc == "hon-chong",
-			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
+			set(layer[skin_map_img].url, 'skin/map/hon-chong-map.png'););
 	</action>
 
 	<action name="set_global" onstart="autorun" scope="local">

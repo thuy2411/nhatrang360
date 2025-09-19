@@ -1937,18 +1937,10 @@
 	</action>
 
 	<action name="set_bg_map" scope="local">
-		if(scene[get(xml.scene)].doc == "chua-long-son",
-			set(layer[skin_map_img].url, 'skin/map/long-son-map.png'););
-		if(scene[get(xml.scene)].doc == "thap-ponagar",
-			set(layer[skin_map_img].url, 'skin/map/ponagar-map.png'););
-		if(scene[get(xml.scene)].doc == "vin-wonder",
-			set(layer[skin_map_img].url, 'skin/map/vinwonder.png'););
-		if(scene[get(xml.scene)].doc == "quang-truong",
-			set(layer[skin_map_img].url, 'skin/map/quang-truong.png'););
-		if(scene[get(xml.scene)].doc == "bai-bien",
-			set(layer[skin_map_img].url, 'skin/map/quang-truong.png'););
-		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
-			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
+		if(scene[get(xml.scene)].doc == "cho-dam",
+			set(layer[skin_map_img].url, 'skin/map/cho-dam-map.png'););
+		if(scene[get(xml.scene)].doc == "ben-tau",
+			set(layer[skin_map_img].url, 'skin/map/anna-marina-map.png'););
 	</action>
 
 	<action name="set_global" onstart="autorun" scope="local">
