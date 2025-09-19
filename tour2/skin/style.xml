@@ -1,0 +1,126 @@
+<krpano>
+    <style name="skin_hotspot_drone" url="icons/drone.png" edge="top" distorted="true"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+           width="120"
+           height="120"
+	       onover.addevent="tween(scale,0.55);"
+	       onout.addevent="tween(scale,0.5);"
+	       onloaded.addevent="skin_hotspotstyle_setup();"
+	       />
+
+	<style name="skin_hotspot_flycam_style" url="icons/helicopter.png" edge="top" distorted="false"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+           width="100"
+           height="100"
+	       onover.addevent="hotspot_flycam_thumb_new(true);"
+	       onloaded.addevent="do_crop_animation(120,120,50);"
+	       />
+	<style name="skin_hotspot_here" url="icons/here.png" edge="top" distorted="false"
+	       tooltip=""
+	       linkedscene=""
+	       linkedscene_lookat=""
+	       linkedscene_hoffset="0"
+	       use3dtransition="false"
+	       onclick="skin_hotspotstyle_click();"
+	       depth="1000"
+	       scale="0.5"
+           width="80"
+           height="80"
+	       onover.addevent="tween(scale,0.55); hotspot_flycam_thumb(true);"
+	       onout.addevent="tween(scale,0.5); hotspot_flycam_thumb(false);"
+	       onloaded.addevent="do_crop_animation(120,120,50);"
+	       />
+    <style name="skin_hotspotstyle_hover"
+	    onclick="skin_hotspotstyle_click();"
+      onover.addevent="hotspot_flycam_thumb_new(true);"
+	    onout.addevent="hotspot_flycam_thumb_new(false);" />
+
+  <data name="ben-tau"><![CDATA[
+    	&nbsp;&nbsp;&nbsp;&nbsp;Ana Marina Nha Trang là bến du thuyền quốc tế đầu tiên tại Việt Nam, khánh thành giai đoạn 2019–2020. Bến nằm tại phía Bắc thành phố, có khả năng tiếp nhận hàng trăm du thuyền lớn nhỏ. Dự án được xây dựng nhằm khai thác tiềm năng du lịch biển cao cấp và thu hút giới thượng lưu quốc tế. Cảnh quan nơi đây kết hợp giữa vịnh Nha Trang xanh ngọc và hệ thống cầu cảng hiện đại. Ana Marina không chỉ phục vụ neo đậu mà còn tích hợp dịch vụ ẩm thực, giải trí, tổ chức sự kiện trên bến cảng. Đây là điểm dừng chân lý tưởng cho hành trình du ngoạn biển Đông Nam Á bằng du thuyền. Bến còn tạo động lực phát triển phân khúc du lịch xa xỉ của Nha Trang, nâng tầm thương hiệu thành phố biển.</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Ana Marina được thiết kế theo chuẩn quốc tế, có thể tiếp nhận du thuyền dài hàng chục mét. Đây là hạ tầng quan trọng để phát triển du lịch biển cao cấp mà Việt Nam còn khan hiếm. Ngoài khu neo đậu, dự án còn phát triển không gian thương mại, nhà hàng, quán bar ven biển. Vào các dịp lễ, bến du thuyền trở thành điểm tổ chức trình diễn âm nhạc, pháo hoa và sự kiện thể thao biển. Nhiều du thuyền quốc tế đã ghé Ana Marina, biến nơi đây thành cửa ngõ kết nối các tuyến hải trình trong khu vực Đông Nam Á. Ngoài du khách thượng lưu, nơi đây còn mở cửa cho công chúng tham quan, chụp ảnh, tận hưởng không khí biển sang trọng. Bến du thuyền góp phần thay đổi diện mạo du lịch Nha Trang, từ phân khúc đại chúng đến phân khúc xa xỉ. Về lâu dài, Ana Marina được kỳ vọng sẽ trở thành trung tâm du lịch biển hàng đầu khu vực. Đây chính là minh chứng cho nỗ lực nâng tầm thương hiệu Nha Trang – Khánh Hòa trên bản đồ du lịch quốc tế.				]]>
+	</data>
+
+	<data name="cho-dam"><![CDATA[
+    	&nbsp;&nbsp;&nbsp;&nbsp;Chợ Đầm được xây dựng từ năm 1969, hoàn thành năm 1972 trên vùng đất từng là một đầm lớn – vì vậy mới có tên gọi đặc trưng. Ngôi chợ do kiến trúc sư Lê Văn Cửu thiết kế, mang dáng bông sen nở độc đáo với mái vòm tròn, kết cấu bê tông chắc chắn. Đây là trung tâm thương mại lớn nhất Nha Trang trong nhiều thập kỷ, được xem là biểu tượng kinh tế – văn hóa của thành phố. Bên trong chợ có hàng nghìn sạp hàng, chia thành nhiều khu: quần áo, thủ công mỹ nghệ, hải sản khô, thực phẩm và hàng lưu niệm. Chợ cũng là điểm mua sắm nổi tiếng với du khách quốc tế nhờ sự đa dạng hàng hóa và giá cả phong phú. Không chỉ là nơi giao thương, Chợ Đầm còn là nơi thể hiện nhịp sống sôi động của người dân địa phương. Cảnh buôn bán tấp nập từ sáng đến tối đã trở thành hình ảnh quen thuộc. Trải qua nhiều biến đổi, chợ vẫn giữ vai trò là điểm đến hấp dẫn cả cho mua sắm lẫn trải nghiệm văn hóa.</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Chợ Đầm không chỉ là khu buôn bán mà còn là điểm du lịch văn hóa nổi tiếng. Nhiều du khách đến đây để mua đặc sản Khánh Hòa như yến sào, mực khô, cá ngựa, nước mắm và đồ lưu niệm thủ công. Kiến trúc mái vòm giúp chợ thông thoáng, mát mẻ dù luôn đông người. Nơi đây cũng phản ánh đời sống người dân miền biển qua cách mặc cả, trao đổi và chào mời khách hàng. Ngoài vai trò thương mại, Chợ Đầm còn là ký ức của nhiều thế hệ người Nha Trang, gắn với quá trình đô thị hóa từ sau năm 1975. Dù hiện nay thành phố có thêm nhiều trung tâm thương mại hiện đại, chợ vẫn giữ được sức hút nhờ nét truyền thống. Đặc biệt, với khách nước ngoài, việc đi chợ trở thành trải nghiệm độc đáo để hiểu thêm văn hóa Việt Nam. Chính vì vậy, Chợ Đầm không chỉ đơn thuần là nơi mua bán, mà còn là “bảo tàng sống” về đời sống đô thị và thương mại của Nha Trang.				]]>
+	</data>
+
+    <action name="hotspot_flycam_thumb_new" scope="local" args="isTrue">
+		if(isTrue,
+			set(hotspot[calc(get(caller.name) +'thumb')].url, get(scene[get(caller.linkedscene)].thumburl));
+			set(hotspot[calc(get(caller.name) +'thumb')].ath, get(caller.ath));
+			set(hotspot[calc(get(caller.name) +'thumb')].atv, get(caller.atv));
+			set(hotspot[calc(get(caller.name) +'thumb')].visible, true);
+			set(skin_settings.autotour, false);
+			autorotate.stop();
+			,
+			set(hotspot[calc(get(caller.name))].visible, false);
+			set(skin_settings.autotour, true);
+			if(layer[icon_rotate_off].visible==false,
+				autorotate.start();
+			)
+		);
+		
+	</action>
+
+  <style name="poi_line" type="container"
+    bg="true" width="2" edge="bottom" align="bottom"
+    bgalpha="1" 
+    bgcolor="0xFFFFFF" />
+
+  <style name="poi_label_text"  oy="-135" ox="3"
+    type="text" padding="6 10 6 10" scale="0" edge="left" align="left"
+    css="font-family:Helvetica;font-size:14px;color:#fff;text-wrap:nowrap; border:1px solid yellow;"
+    bg="true" bgalpha="1" bgcolor="0x27C1B5" 
+    bgshadow="true"  onclick="skin_hotspotstyle_click();" />  
+
+  <events name="poi_evt" keep="true"
+    onviewchange="poi_update_labels();" />
+
+  <action name="poi_update_labels" scope="local">
+    for(set(h,0), h LT hotspot.count, inc(h),
+      if(hotspot[get(h)].is_show == true,
+        copy(hn,   hotspot[get(h)].name);
+        copy(hath, hotspot[get(hn)].ath );
+        copy(hatv, hotspot[get(hn)].atv );
+        spheretoscreen(hath, hatv, sx, sy);
+        if(sx != null AND sy != null AND sx GE 0 AND sx LE get(stagewidth),
+          if(sy GE 0 AND sy LE get(stageheight),
+            
+             /* ---- FOCUS THEO PIXEL QUANH TÂM ---- */
+            calc(cx, get(stagewidth)  * 0.5);
+            calc(cy, get(stageheight) * 0.5);
+            calc(dxpx, abs(sx - cx));
+            calc(dypx, abs(sy - cy));
+
+            /* bán kính vùng chú ý (px) – có thể override per-hotspot bằng attr focus_radius */
+            set(focus_radius, 600);
+            if(hotspot[get(hn)].focus_radius, copy(focus_radius, hotspot[get(hn)].focus_radius); );
+
+            if(dxpx LE focus_radius AND dypx LE focus_radius,
+              set(hotspot[get(hn)].visible,true);
+              tween(hotspot[get(hn)].scale,1,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,150,1,easeOutExpo);
+            ,
+              tween(hotspot[get(hn)].scale,0,1,easeOutExpo);
+              tween(hotspot[calc(get(hn)+'line')].height,0,1,easeOutExpo);
+            );
+          );
+        );,
+      );
+    );
+  </action>
+</krpano>
