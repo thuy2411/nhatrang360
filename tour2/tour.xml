@@ -71,141 +71,8 @@
 	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
-	
-	<scene name="scene_bt_tren_cao" title="bt_tren_cao" onstart="" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_tren_cao.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,5120" />
-		</image>
-
-	</scene>
-	
-	<scene name="scene_bt_bang_ten" title="bt-bang-ten" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_bang_ten.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_bang_ten.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803757123" style="skin_hotspotstyle" ath="-161.676" atv="8.001" depth="1000.0" linkedscene="scene_bt_khu_dan_cu" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803757207" style="skin_hotspotstyle" ath="-80.492" atv="15.18" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_khu_dan_cu" title="bt-khu-dan-cu" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_khu_dan_cu.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_khu_dan_cu.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803778613" style="skin_hotspotstyle" ath="-85.281" atv="23.06" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803778733" style="skin_hotspotstyle" ath="106.181" atv="5.011" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_view_cf" title="bt-view-cf" onstart="" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_view_cf.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_view_cf.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803778270" style="skin_hotspotstyle" ath="-40.566" atv="7.932" depth="1000.0" linkedscene="scene_bt_view_cot_co" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803778404" style="skin_hotspotstyle" ath="121.355" atv="20.295" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_view_cot_co" title="bt-view-cot-co" onstart="" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_view_cot_co.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_view_cot_co.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803778910" style="skin_hotspotstyle" ath="114.062" atv="5.282" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779010" style="skin_hotspotstyle" ath="-105.53" atv="-0.203" depth="1000.0" linkedscene="scene_bt_neo_tau_3" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_neo_tau_3" title="bt-neo-tau-3" onstart="" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_neo_tau_3.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_neo_tau_3.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803779111" style="skin_hotspotstyle" ath="87.32" atv="1.525" depth="1000.0" linkedscene="scene_bt_view_cot_co" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779236" style="skin_hotspotstyle" ath="-90.033" atv="6.172" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_neo_tau_1" title="bt-neo-tau-1" onstart="" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_neo_tau_1.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_neo_tau_1.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803779332" style="skin_hotspotstyle" ath="49.308" atv="5.157" depth="1000.0" linkedscene="scene_bt_neo_tau_2" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779408" style="skin_hotspotstyle" ath="-134.34" atv="13.072" depth="1000.0" linkedscene="scene_bt_neo_tau_3" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_bt_neo_tau_2" title="bt-neo-tau-2" onstart="" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/bt_neo_tau_2.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/bt_neo_tau_2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803779544" style="skin_hotspotstyle" ath="-94.238" atv="12.965" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779641" style="skin_hotspotstyle" ath="89.153" atv="-26.26" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene name="scene_cd_trai_cay" title="cd-trai-cay" onstart="" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene name="scene_cd_trai_cay" title="Chợ bên ngoài" onstart="lookat(155,0,140)" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -217,12 +84,12 @@
 			<cube url="panos/cd_trai_cay.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
 		</image>
 
-		<hotspot name="spot1803779791" style="skin_hotspotstyle" ath="161.485" atv="12.051" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779841" style="skin_hotspotstyle" ath="21.926" atv="-23.899" depth="1000.0" linkedscene="scene_bt_neo_tau_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779791" style="skin_hotspotstyle" is_ui="true" ath="161.485" atv="12.051" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779841" style="skin_hotspotstyle" is_ui="true" ath="21.926" atv="-23.899" depth="1000.0" linkedscene="scene_bt_neo_tau_2" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_cd_cong_vao" title="cd-cong-vao" onstart="" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene name="scene_cd_cong_vao" title="Cổng vào chợ" onstart="lookat(35,0,140)" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -234,12 +101,12 @@
 			<cube url="panos/cd_cong_vao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
 		</image>
 
-		<hotspot name="spot1803779944" style="skin_hotspotstyle" ath="37.882" atv="24.816" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780211" style="skin_hotspotstyle" ath="-117.61" atv="17.131" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779944" style="skin_hotspotstyle" is_ui="true" ath="37.882" atv="24.816" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780211" style="skin_hotspotstyle" is_ui="true" ath="-117.61" atv="17.131" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_cd_cho_banh" title="cd-cho-banh" onstart="" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene name="scene_cd_cho_banh" title="Gian hàng thực phẩm" onstart="lookat(-80,0,140)" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -251,12 +118,12 @@
 			<cube url="panos/cd_cho_banh.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
 		</image>
 
-		<hotspot name="spot1803780434" style="skin_hotspotstyle" ath="95.956" atv="13.37" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780651" style="skin_hotspotstyle" ath="-86.98" atv="16.997" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780434" style="skin_hotspotstyle" is_ui="true" ath="95.956" atv="13.37" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780651" style="skin_hotspotstyle" is_ui="true" ath="-86.98" atv="16.997" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_cd_thu_cong" title="cd-thu-cong" onstart="" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene name="scene_cd_thu_cong" title="Gian hàng thủ công mỹ nghệ" onstart="lookat(-120,0,140)" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -268,12 +135,12 @@
 			<cube url="panos/cd_thu_cong.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
 		</image>
 
-		<hotspot name="spot1803780813" style="skin_hotspotstyle" ath="46.643" atv="10.384" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780960" style="skin_hotspotstyle" ath="-127.685" atv="16.534" depth="1000.0" linkedscene="scene_cd_trang_suc" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780813" style="skin_hotspotstyle" is_ui="true" ath="46.643" atv="10.384" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780960" style="skin_hotspotstyle" is_ui="true" ath="-127.685" atv="16.534" depth="1000.0" linkedscene="scene_cd_trang_suc" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
-	<scene name="scene_cd_trang_suc" title="cd-trang-suc" onstart="" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene name="scene_cd_trang_suc" title="Gian hàng quà lưu niệm" onstart="" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -285,9 +152,145 @@
 			<cube url="panos/cd_trang_suc.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
 		</image>
 
-		<hotspot name="spot1803781063" style="skin_hotspotstyle" ath="50.477" atv="13.22" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803781063" style="skin_hotspotstyle" is_ui="true" ath="50.477" atv="13.22" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804538886" style="skin_hotspotstyle" is_ui="true" ath="-102.503" atv="-34.403" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+	
+	<scene name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_tren_cao.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,5120" />
+		</image>
+
+		<hotspot name="spot1804540304" style="skin_hotspotstyle" is_ui="true" ath="-9.862" atv="17.796" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+	
+	<scene name="scene_bt_bang_ten" title="Cổng vào" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_bang_ten.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_bang_ten.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803757123" style="skin_hotspotstyle" is_ui="true" ath="-161.676" atv="8.001" depth="1000.0" linkedscene="scene_bt_khu_dan_cu" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803757207" style="skin_hotspotstyle" is_ui="true" ath="-80.492" atv="15.18" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
+	<scene name="scene_bt_khu_dan_cu" title="Khu đô thị" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_khu_dan_cu.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_khu_dan_cu.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803778613" style="skin_hotspotstyle" is_ui="true" ath="-85.281" atv="23.06" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803778733" style="skin_hotspotstyle" is_ui="true" ath="106.181" atv="5.011" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bt_view_cf" title="Quán cà phê" onstart="lookat(-80,0,130)" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_view_cf.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_view_cf.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803778270" style="skin_hotspotstyle" is_ui="true" ath="-40.566" atv="7.932" depth="1000.0" linkedscene="scene_bt_view_cot_co" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803778404" style="skin_hotspotstyle" is_ui="true" ath="121.355" atv="20.295" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bt_view_cot_co" title="View từ cột cờ" onstart="lookat(-110,0,130)" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_view_cot_co.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_view_cot_co.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803778910" style="skin_hotspotstyle" is_ui="true" ath="114.062" atv="5.282" depth="1000.0" linkedscene="scene_bt_view_cf" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779010" style="skin_hotspotstyle" is_ui="true" ath="-105.53" atv="-0.203" depth="1000.0" linkedscene="scene_bt_neo_tau_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bt_neo_tau_3" title="Đường xuống chỗ neo đậu" onstart="lookat(-90,0,130)" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_neo_tau_3.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_neo_tau_3.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803779111" style="skin_hotspotstyle" is_ui="true" ath="87.32" atv="1.525" depth="1000.0" linkedscene="scene_bt_view_cot_co" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779236" style="skin_hotspotstyle" is_ui="true" ath="-90.033" atv="6.172" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bt_neo_tau_1" title="Chỗ neo đậu 1" onstart="lookat(45,0,130)" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_neo_tau_1.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_neo_tau_1.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803779332" style="skin_hotspotstyle" is_ui="true" ath="49.308" atv="5.157" depth="1000.0" linkedscene="scene_bt_neo_tau_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803779408" style="skin_hotspotstyle" is_ui="true" ath="-134.34" atv="13.072" depth="1000.0" linkedscene="scene_bt_neo_tau_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_bt_neo_tau_2" title="Chỗ neo đậu 2" onstart="lookat(70,0,130)" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_neo_tau_2.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_neo_tau_2.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803779544" style="skin_hotspotstyle" is_ui="true" ath="-94.238" atv="12.965" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804558588" style="skin_hotspotstyle" is_ui="true" ath="89.571" atv="-44.759" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		
+
+	</scene>
 
 </krpano>

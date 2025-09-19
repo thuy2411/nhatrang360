@@ -67,8 +67,8 @@
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
 	<set var="idle_enabled" val="true" />
-	<set var="menu_items" val="'scene_bt_bang_ten|Bến Tàu Anna Marina|ben-tau,scene_cd_cong_vao|Chợ Đầm|cho-dam'" />
-	<set var="menu_mobile_items" val="'scene_bt_bang_ten|Bến Tàu Anna Marina|ben-tau,scene_cd_cong_vao|Chợ Đầm|cho-dam'" />
+	<set var="menu_items" val="'scene_cd_cong_vao|Chợ Đầm|cho-dam,scene_bt_bang_ten|Bến Tàu Anna Marina|ben-tau'" />
+	<set var="menu_mobile_items" val="'scene_cd_cong_vao|Chợ Đầm|cho-dam,scene_bt_bang_ten|Bến Tàu Anna Marina|ben-tau'" />
 	
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
