@@ -72,7 +72,7 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-	<scene name="scene_cd_trai_cay" title="Chợ bên ngoài" onstart="lookat(155,0,140)" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene mapx="0.46" mapy="0.9" name="scene_cd_trai_cay" title="Chợ bên ngoài" onstart="lookat(155,0,140)" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -89,7 +89,7 @@
 
 	</scene>
 
-	<scene name="scene_cd_cong_vao" title="Cổng vào chợ" onstart="lookat(35,0,140)" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene mapx="0.46" mapy="0.7" name="scene_cd_cong_vao" title="Cổng vào chợ" onstart="lookat(35,0,140)" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -106,7 +106,7 @@
 
 	</scene>
 
-	<scene name="scene_cd_cho_banh" title="Gian hàng thực phẩm" onstart="lookat(-80,0,140)" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene mapx="0.35" mapy="0.6" name="scene_cd_cho_banh" title="Gian hàng thực phẩm" onstart="lookat(-80,0,140)" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -123,7 +123,7 @@
 
 	</scene>
 
-	<scene name="scene_cd_thu_cong" title="Gian hàng thủ công mỹ nghệ" onstart="lookat(-120,0,140)" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene mapx="0.55" mapy="0.6" name="scene_cd_thu_cong" title="Gian hàng thủ công mỹ nghệ" onstart="lookat(-120,0,140)" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -140,7 +140,7 @@
 
 	</scene>
 
-	<scene name="scene_cd_trang_suc" title="Gian hàng quà lưu niệm" onstart="" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+	<scene mapx="0.46" mapy="0.35" name="scene_cd_trang_suc" title="Gian hàng quà lưu niệm" onstart="lookat(-90,0,140)" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -153,11 +153,14 @@
 		</image>
 
 		<hotspot name="spot1803781063" style="skin_hotspotstyle" is_ui="true" ath="50.477" atv="13.22" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804538886" style="skin_hotspotstyle" is_ui="true" ath="-102.503" atv="-34.403" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804538886" style="skin_hotspot_flycam_style" is_ui="true" ath="-102.503" atv="-34.403" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804538886thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1804538886text" is_ui="true" ath="-102.503" atv="-34.403" html="Ana Marina - Trên cao" style="poi_label_text"	is_show="true" linkedscene="scene_bt_tren_cao" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1804538886textline" is_ui="true" style="poi_line" ath="-102.503" atv="-34.403"/>
 
 	</scene>
 	
-	<scene name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
+	<scene mapx="0.77" mapy="0.35" name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -169,11 +172,12 @@
 			<cube url="panos/bt_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,5120" />
 		</image>
 
-		<hotspot name="spot1804540304" style="skin_hotspotstyle" is_ui="true" ath="-9.862" atv="17.796" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
-
+		<hotspot name="spot1804540304" style="skin_hotspot_here" is_ui="true" ath="-9.862" atv="17.796" depth="1000.0" linkedscene="scene_bt_bang_ten" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804540304text" is_ui="true"  ath="-9.862" atv="17.796" html="Cổng vào" style="poi_label_text"	is_show="true" linkedscene="scene_mat_tien" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1804540304textline" is_ui="true" style="poi_line" ath="-9.862" atv="17.796"/>
 	</scene>
 	
-	<scene name="scene_bt_bang_ten" title="Cổng vào" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.9" name="scene_bt_bang_ten" title="Cổng vào" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -190,7 +194,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_khu_dan_cu" title="Khu đô thị" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.12" mapy="0.9" name="scene_bt_khu_dan_cu" title="Khu đô thị" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -207,7 +211,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_view_cf" title="Quán cà phê" onstart="lookat(-80,0,130)" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.12" mapy="0.8" name="scene_bt_view_cf" title="Quán cà phê" onstart="lookat(-80,0,130)" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -224,7 +228,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_view_cot_co" title="View từ cột cờ" onstart="lookat(-110,0,130)" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.3" mapy="0.8" name="scene_bt_view_cot_co" title="View từ cột cờ" onstart="lookat(-110,0,130)" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -241,7 +245,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_neo_tau_3" title="Đường xuống chỗ neo đậu" onstart="lookat(-90,0,130)" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.62" name="scene_bt_neo_tau_3" title="Đường xuống chỗ neo đậu" onstart="lookat(-90,0,130)" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -258,7 +262,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_neo_tau_1" title="Chỗ neo đậu 1" onstart="lookat(45,0,130)" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.46" name="scene_bt_neo_tau_1" title="Chỗ neo đậu 1" onstart="lookat(45,0,130)" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -275,7 +279,7 @@
 
 	</scene>
 
-	<scene name="scene_bt_neo_tau_2" title="Chỗ neo đậu 2" onstart="lookat(70,0,130)" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.23" name="scene_bt_neo_tau_2" title="Chỗ neo đậu 2" onstart="lookat(90,-30,130)" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -288,8 +292,10 @@
 		</image>
 
 		<hotspot name="spot1803779544" style="skin_hotspotstyle" is_ui="true" ath="-94.238" atv="12.965" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804558588" style="skin_hotspotstyle" is_ui="true" ath="89.571" atv="-44.759" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		
+		<hotspot name="spot1804558588" style="skin_hotspot_flycam_style" is_ui="true" ath="89.571" atv="-44.759" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804558588thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1804558588text" is_ui="true" ath="89.571" atv="-44.759" html="Ana Marina- Trên cao" style="poi_label_text"	is_show="true" linkedscene="scene_bt_tren_cao" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1804558588textline" is_ui="true" style="poi_line" ath="89.571" atv="-44.759"/>
 
 	</scene>
 
