@@ -72,7 +72,19 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 	
+	<scene name="scene_bt_tren_cao" title="bt_tren_cao" onstart="" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
 
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/bt_tren_cao.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/bt_tren_cao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,5120" />
+		</image>
+
+	</scene>
 	
 	<scene name="scene_bt_bang_ten" title="bt-bang-ten" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
 		
