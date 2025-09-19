@@ -544,7 +544,8 @@
 		if(get(scene_doc)  == "quang-truong", set(layer[menu_box_mobile_thumb_text].html, 'Quảng Trường 2-4'); );
 		if(get(scene_doc)  == "bai-bien", set(layer[menu_box_mobile_thumb_text].html, 'Bãi biển Trần Phú'); );
 		if(get(scene_doc)  == "vien-hai-duong-hoc", set(layer[menu_box_mobile_thumb_text].html, 'Viện Hải Dương Học'); );
-		
+		if(get(scene_doc)  == "hon-chong", set(layer[menu_box_mobile_thumb_text].html, 'Hòn Chồng - Hòn Vợ'); );
+
 		set(i, 0);
 		for(set(sceneindex, 0), sceneindex LT scene.count, inc(sceneindex),
 			if(scene[get(sceneindex)].doc == get(scene_doc),
@@ -1948,6 +1949,8 @@
 			set(layer[skin_map_img].url, 'skin/map/quang-truong.png'););
 		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
 			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
+		if(scene[get(xml.scene)].doc == "hon-chong",
+			set(layer[skin_map_img].url, 'skin/map/VHDH-map.png'););
 	</action>
 
 	<action name="set_global" onstart="autorun" scope="local">
@@ -1963,6 +1966,8 @@
 			set(global.title, 'Bãi biển Trần Phú'));
 		if(scene[get(xml.scene)].doc == "vien-hai-duong-hoc",
 			set(global.title, 'Viện Hải Dương Học'));
+		if(scene[get(xml.scene)].doc == "hon-chong",
+			set(global.title, 'Hòn Chồng - Hòn Vợ'));
 	</action>
 
 	<action name="play_audio">

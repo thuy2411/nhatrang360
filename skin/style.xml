@@ -113,6 +113,12 @@
 		]]>
 	</data>
 
+	<data name="hon-chong"><![CDATA[
+		&nbsp;&nbsp;&nbsp;&nbsp;Hòn Chồng – Hòn Vợ là quần thể đá tự nhiên nằm sát bờ biển phía Bắc Nha Trang, cách trung tâm thành phố khoảng 3 km. Nơi đây nổi bật với các tảng đá lớn chồng chất lên nhau kỳ thú, tạo thành hình thù độc đáo. Hòn Chồng gồm nhiều khối đá to, trong đó có tảng đá in dấu vết bàn tay khổng lồ truyền thuyết. Đối diện ngoài khơi là Hòn Vợ, nhỏ hơn, gắn liền với câu chuyện tình cảm động giữa đôi vợ chồng ngư dân. Cảnh quan khu vực vừa hoang sơ vừa lãng mạn, phía sau là núi Cô Tiên, phía trước hướng ra biển xanh. Đây là địa điểm ngắm bình minh, hoàng hôn và toàn cảnh thành phố từ xa rất đẹp. Quần thể được công nhận là thắng cảnh cấp quốc gia năm 1998. Ngoài giá trị tự nhiên, nơi đây còn gắn với đời sống văn hóa, thi ca và nghệ thuật địa phương. Hằng năm, Hòn Chồng thu hút hàng chục nghìn du khách, đặc biệt là khách thích khám phá cảnh quan và chụp ảnh.</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;Khu vực Hòn Chồng hiện có thêm nhà trưng bày giới thiệu về thiên nhiên và văn hóa biển Nha Trang. Từ bãi đá, du khách có thể nhìn thấy đảo Hòn Tre, Hòn Yến và cả tháp Bà Ponagar từ xa. Không gian ở đây yên tĩnh hơn so với các bãi biển trung tâm, thích hợp để nghỉ ngơi và thưởng ngoạn. Ngoài tham quan cảnh quan, khu vực còn tổ chức biểu diễn nhạc cụ dân tộc như đàn đá, đàn T’rưng, tạo điểm nhấn văn hóa cho du khách. Truyền thuyết về dấu tay trên đá và tình yêu đôi lứa khiến nơi này thêm phần huyền bí, lãng mạn. Vào mùa hè, sóng biển dịu, khách có thể đi bộ quanh bãi đá, khám phá hình dạng kỳ thú của từng khối đá. Hòn Chồng – Hòn Vợ vì vậy không chỉ là thắng cảnh thiên nhiên mà còn là không gian giao thoa giữa thiên nhiên, truyền thuyết và nghệ thuật dân gian.
+		]]>
+	</data>
+
     <action name="hotspot_flycam_thumb_new" scope="local" args="isTrue">
 		if(isTrue,
 			set(hotspot[calc(get(caller.name) +'thumb')].url, get(scene[get(caller.linkedscene)].thumburl));
