@@ -1060,9 +1060,9 @@
 			<cube url="panos/vinpearl_land_04.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
 		</image>
 
-		<hotspot name="spot1786459228" style="skin_hotspot_flycam_style" is_ui="true" ath="90.867" atv="-20.371" depth="1000.0" linkedscene="scene_quang_truong_01" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1786459228thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_quang_truong_01" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1786459228text" is_ui="true" ath="90.867" atv="-20.371" html="Quảng Trường 2-4" style="poi_label_text"	is_show="true" linkedscene="scene_quang_truong_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786459228" style="skin_hotspot_flycam_style" is_ui="true" ath="90.867" atv="-20.371" depth="1000.0" linkedscene="scene_qt_ubnd" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786459228thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_qt_ubnd" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1786459228text" is_ui="true" ath="90.867" atv="-20.371" html="Quảng Trường 2-4" style="poi_label_text"	is_show="true" linkedscene="scene_qt_ubnd" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
 		<hotspot name="spot1786459228textline" is_ui="true" style="poi_line" ath="90.867" atv="-20.371"/>
 		
 		<hotspot name="spot1786459270" style="skin_hotspotstyle" is_ui="true" ath="-48.085" atv="16.329" depth="1000.0" linkedscene="scene_vinpearl_land_03" linkedscene_hoffset="0.0" use3dtransition="true" />

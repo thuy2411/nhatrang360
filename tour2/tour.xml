@@ -85,7 +85,6 @@
 		</image>
 
 		<hotspot name="spot1803779791" style="skin_hotspotstyle" is_ui="true" ath="161.485" atv="12.051" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803779841" style="skin_hotspotstyle" is_ui="true" ath="21.926" atv="-23.899" depth="1000.0" linkedscene="scene_bt_neo_tau_2" linkedscene_hoffset="0.0" use3dtransition="true" />
 
 	</scene>
 
