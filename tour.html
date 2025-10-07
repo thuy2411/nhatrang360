@@ -89,6 +89,24 @@
 		case "hon-chong":
 			bgSource.src = "music/bg_music-hon-chong.wav";
 			break;
+		case "hon-chong-hon-vo":
+			bgSource.src = "music/bg_music-hon-chong.wav";
+			break;
+		case "hon-chong-hau-vien":
+			bgSource.src = "music/bg_music-hon-chong.wav";
+			break;
+		case "ponagar-trung-bay":
+			bgSource.src = "music/bg_music-thap-ponagar.wav";
+			break;
+		case "ponagar-4-thap":
+			bgSource.src = "music/bg_music-thap-ponagar.wav";
+			break;
+		case "ponagar-tien-dinh":
+			bgSource.src = "music/bg_music-thap-ponagar.wav";
+			break;
+		case "hon-chong-hoi-quan":
+			bgSource.src = "music/bg_music-hon-chong.wav";
+			break;
 	};
 	if (isToggle=='on') {
 		if (docBefore == "") {
@@ -98,7 +116,7 @@
 		if (docBefore != doc) {
 			bg_audio.load();       
 		}
-		bg_audio.volume = 0.1;
+		bg_audio.volume = 0.05;
 		bg_audio.play(); 
 		docBefore = doc;
 	} else {
@@ -147,6 +165,24 @@
 		case "hon-chong":
 			introSource.src = "intro/hon-chong.wav";
 			break;
+		case "hon-chong-hon-vo":
+			introSource.src = "intro/hon-chong-hon-vo.m4a";
+			break;
+		case "hon-chong-hau-vien":
+			introSource.src = "intro/hon-chong-hau-vien.m4a";
+			break;
+		case "hon-chong-hoi-quan":
+			introSource.src = "intro/hon-chong-hoi-quan.m4a";
+			break;	
+		case "ponagar-trung-bay":
+			introSource.src = "intro/ponagar-trung-bay.m4a";
+			break;
+		case "ponagar-4-thap":
+			introSource.src = "intro/ponagar-4-thap.m4a";
+			break;
+		case "ponagar-tien-dinh":
+			introSource.src = "intro/ponagar-tien-dinh.m4a";
+			break;		
 	};
 	if (isToggle=='on') {
 		if (sceneBefore == "") {

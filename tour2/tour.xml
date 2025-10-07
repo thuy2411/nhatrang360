@@ -72,7 +72,7 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-<scene mapx="0.77" mapy="0.35" name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
+<scene mapx="0.77" mapy="0.35" name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="ana-cong" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -89,7 +89,7 @@
 		<hotspot name="spot1804540304textline" is_ui="true" style="poi_line" ath="-9.862" atv="17.796"/>
 	</scene>
 	
-	<scene mapx="0.47" mapy="0.9" name="scene_bt_bang_ten" title="Cổng vào" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.9" name="scene_bt_bang_ten" title="Cổng vào" onstart="lookat(-80,0,130)" thumburl="panos/bt_bang_ten.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-cong" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -106,7 +106,7 @@
 
 	</scene>
 
-	<scene mapx="0.12" mapy="0.9" name="scene_bt_khu_dan_cu" title="Khu đô thị" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.12" mapy="0.9" name="scene_bt_khu_dan_cu" title="Khu đô thị" onstart="lookat(100,0,130)" thumburl="panos/bt_khu_dan_cu.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-do-thi" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -123,7 +123,7 @@
 
 	</scene>
 
-	<scene mapx="0.12" mapy="0.8" name="scene_bt_view_cf" title="Quán cà phê" onstart="lookat(-80,0,130)" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.12" mapy="0.8" name="scene_bt_view_cf" title="Quán cà phê" onstart="lookat(-80,0,130)" thumburl="panos/bt_view_cf.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-do-thi" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -140,7 +140,7 @@
 
 	</scene>
 
-	<scene mapx="0.3" mapy="0.8" name="scene_bt_view_cot_co" title="View từ cột cờ" onstart="lookat(-110,0,130)" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.3" mapy="0.8" name="scene_bt_view_cot_co" title="View từ cột cờ" onstart="lookat(-110,0,130)" thumburl="panos/bt_view_cot_co.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-do-thi" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -157,7 +157,7 @@
 
 	</scene>
 
-	<scene mapx="0.47" mapy="0.62" name="scene_bt_neo_tau_3" title="Đường xuống chỗ neo đậu" onstart="lookat(-90,0,130)" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.62" name="scene_bt_neo_tau_3" title="Đường xuống chỗ neo đậu" onstart="lookat(-90,0,130)" thumburl="panos/bt_neo_tau_3.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-neo" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -174,7 +174,7 @@
 
 	</scene>
 
-	<scene mapx="0.47" mapy="0.46" name="scene_bt_neo_tau_1" title="Chỗ neo đậu 1" onstart="lookat(45,0,130)" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.46" name="scene_bt_neo_tau_1" title="Chỗ neo đậu 1" onstart="lookat(45,0,130)" thumburl="panos/bt_neo_tau_1.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-neo" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -191,7 +191,7 @@
 
 	</scene>
 
-	<scene mapx="0.47" mapy="0.23" name="scene_bt_neo_tau_2" title="Chỗ neo đậu 2" onstart="lookat(90,-30,130)" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="" >
+	<scene mapx="0.47" mapy="0.23" name="scene_bt_neo_tau_2" title="Chỗ neo đậu 2" onstart="lookat(90,-30,130)" thumburl="panos/bt_neo_tau_2.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="ben-tau" child="ana-neo" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 

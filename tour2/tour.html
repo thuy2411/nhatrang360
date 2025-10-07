@@ -56,6 +56,18 @@
 		case "ben-tau":
 			bgSource.src = "music/bg_music-ana-marina.wav";
 			break;
+		case "vin-wonder":
+			bgSource.src = "music/bg_music-vin-wonder.wav";
+			break;
+		case "ana-cong":
+			bgSource.src = "music/bg_music-ana-marina.wav";
+			break;
+		case "ana-do-thi":
+			bgSource.src = "music/bg_music-ana-marina.wav";
+			break;
+		case "ana-neo":
+			bgSource.src = "music/bg_music-ana-marina.wav";
+			break;
 	};
 	if (isToggle=='on') {
 		if (docBefore == "") {
@@ -65,7 +77,7 @@
 		if (docBefore != doc) {
 			bg_audio.load();       
 		}
-		bg_audio.volume = 0.1;
+		bg_audio.volume = 0.05;
 		bg_audio.play(); 
 		docBefore = doc;
 	} else {
@@ -80,6 +92,18 @@
 			break;
 		case "ben-tau":
 			introSource.src = "intro/ana-marina.wav";
+			break;
+		case "vin-wonder":
+			introSource.src = "intro/vin-wonder.wav";
+			break;
+		case "ana-cong":
+			introSource.src = "intro/ana-cong.m4a";
+			break;
+		case "ana-do-thi":
+			introSource.src = "intro/ana-do-thi.m4a";
+			break;
+		case "ana-neo":
+			introSource.src = "intro/ana-neo.m4a";
 			break;
 	};
 	if (isToggle=='on') {

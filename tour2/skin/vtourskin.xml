@@ -1046,11 +1046,11 @@
 		<layer name="skin_buttonglow"  style="skin_base" crop="64|384|64|64" align="center" x="0" y="1" scale="1.0" alpha="0.0" visible="false" enabled="false" />
 		<layer name="btn_next_scene" style="skin_tooltips" capture="false" type="text" align="rightcenter"  url="icons/right-arrow.png" width="60" height="60" scale="0.7" x="20" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );"/>
 		<layer name="btn_prev_container" type="container" align="bottom" width="28%" height="15%" x="-10">
-			<layer name="icon_switch_scene" capture="false" type="container" align="leftcenter" width="20%" height="100%" scale="0.7">
+			<!-- <layer name="icon_switch_scene" capture="false" type="container" align="leftcenter" width="20%" height="100%" scale="0.7">
 				<layer name="skin_next_btn"  style="skin_base" url="icons/up-arrow.png" align="top" scale="1.0" visible="true" enabled="true" width="100%" height="60%" onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );"/>
 				<layer name="skin_prev_btn"  style="skin_base" url="icons/down-arrow.png" align="bottom" scale="1.0" visible="true" enabled="true" width="80%" height="40%" onclick="go_back();"/>
-			</layer>
-			<layer name="skin_title" type="text" zorder="0" x="30%" align="left" width="80%" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:18px; word-wrap: break-word; white-space: normal;'" txtshadow="get:skin_settings.design_text_txtshadow" visible="false" onautosized="skin_video_updateseekbarwidth();" />
+			</layer> -->
+			<layer name="skin_title" type="text" zorder="0" x="30%" align="left" width="100%" enabled="false" bg="false" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:18px; word-wrap: break-word; white-space: normal;'" txtshadow="get:skin_settings.design_text_txtshadow" visible="false" onautosized="skin_video_updateseekbarwidth();" />
 		</layer>
 		<layer name="skin_title_mobile" visible="false" type="text" zorder="0" x="0" align="leftbottom" width="65%" bg="true" bgalpha="0.7" bgcolor="0x676087c2" css="calc:skin_settings.design_text_css + ' text-align:left; font-style:italic; font-size:18px; word-wrap: break-word; white-space: normal;'" txtshadow="get:skin_settings.design_text_txtshadow" onautosized="skin_video_updateseekbarwidth();" enabled="true" onclick="set(layer[menu_box_mobile].visible,true); build_thumb_mobile(get(scene[get(xml.scene)].doc))">
 			<layer name="skin_title_mobile_show"  style="skin_base" url="icons/up-arrow-menu.png" align="right" scale="1.0" visible="true" enabled="true" width="20" height="20" onclick="set(layer[menu_box_mobile].visible,true); build_thumb_mobile(get(scene[get(xml.scene)].doc))"/>
