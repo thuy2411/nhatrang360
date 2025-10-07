@@ -67,8 +67,8 @@
 	<set var="click_title_flg" val="false" />
 	<set var="first_drag" val="true" />
 	<set var="idle_enabled" val="true" />
-	<set var="menu_items" val="'scene_cd_cong_vao|Chợ Đầm|cho-dam,scene_bt_tren_cao|Bến Tàu Ana Marina|ben-tau'" />
-	<set var="menu_mobile_items" val="'scene_cd_cong_vao|Chợ Đầm|cho-dam,scene_bt_tren_cao|Bến Tàu Ana Marina|ben-tau'" />
+	<set var="menu_items" val="'scene_bt_tren_cao|Bến Tàu Ana Marina|ben-tau,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_cd_cong_vao|Chợ Đầm|cho-dam'" />
+	<set var="menu_mobile_items" val="'scene_bt_tren_cao|Bến Tàu Ana Marina|ben-tau,scene_vinpearl_land_01|VinWonder|vin-wonder,scene_cd_cong_vao|Chợ Đầm|cho-dam'" />
 	
 	<!-- save the url path of this xml file (the url value will be adjusted during xml parsing) -->
 	<vtourskinxmlpath url="./" />
@@ -100,7 +100,6 @@
         🏯Tháp Bà Ponagar: Kiệt tác Chăm Pa cổ kính, nơi lưu giữ nét tâm linh hàng trăm năm.</br>
         🪨Hòn Chồng – Hòn Vợ: Cụm đá kỳ thú gắn liền truyền thuyết tình yêu, nơi sóng biển hòa ca bất tận.</br>
         🐠Viện Hải Dương Học: “Bảo tàng biển sống” với hàng nghìn mẫu sinh vật, mở ra thế giới đại dương kỳ bí.</br>
-        🎢VinWonders Nha Trang: Thiên đường giải trí hiện đại, cuốn hút từ trò chơi mạo hiểm đến công viên nước.</br>
         🏙️Quảng trường 2/4 – Tháp Trầm Hương: Biểu tượng mới giữa trung tâm, điểm check-in không thể bỏ lỡ.</br>
         🏖️Bãi biển Trần Phú: Bờ cát vàng trải dài, làn nước xanh ngọc, lý tưởng để kết thúc một ngày trọn vẹn.        
 		]]>

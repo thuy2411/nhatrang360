@@ -72,94 +72,7 @@
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
-	<scene mapx="0.46" mapy="0.9" name="scene_cd_trai_cay" title="Chợ bên ngoài" onstart="lookat(155,0,140)" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/cd_trai_cay.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/cd_trai_cay.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803779791" style="skin_hotspotstyle" is_ui="true" ath="161.485" atv="12.051" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene mapx="0.46" mapy="0.7" name="scene_cd_cong_vao" title="Cổng vào chợ" onstart="lookat(35,0,140)" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/cd_cong_vao.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/cd_cong_vao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803779944" style="skin_hotspotstyle" is_ui="true" ath="37.882" atv="24.816" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780211" style="skin_hotspotstyle" is_ui="true" ath="-117.61" atv="17.131" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene mapx="0.35" mapy="0.6" name="scene_cd_cho_banh" title="Gian hàng thực phẩm" onstart="lookat(-80,0,140)" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/cd_cho_banh.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/cd_cho_banh.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803780434" style="skin_hotspotstyle" is_ui="true" ath="95.956" atv="13.37" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780651" style="skin_hotspotstyle" is_ui="true" ath="-86.98" atv="16.997" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene mapx="0.55" mapy="0.6" name="scene_cd_thu_cong" title="Gian hàng thủ công mỹ nghệ" onstart="lookat(-120,0,140)" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/cd_thu_cong.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/cd_thu_cong.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803780813" style="skin_hotspotstyle" is_ui="true" ath="46.643" atv="10.384" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1803780960" style="skin_hotspotstyle" is_ui="true" ath="-127.685" atv="16.534" depth="1000.0" linkedscene="scene_cd_trang_suc" linkedscene_hoffset="0.0" use3dtransition="true" />
-
-	</scene>
-
-	<scene mapx="0.46" mapy="0.35" name="scene_cd_trang_suc" title="Gian hàng quà lưu niệm" onstart="lookat(-90,0,140)" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/cd_trang_suc.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/cd_trang_suc.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
-		</image>
-
-		<hotspot name="spot1803781063" style="skin_hotspotstyle" is_ui="true" ath="50.477" atv="13.22" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804538886" style="skin_hotspot_flycam_style" is_ui="true" ath="-102.503" atv="-34.403" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804538886thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1804538886text" is_ui="true" ath="-102.503" atv="-34.403" html="Ana Marina - Trên cao" style="poi_label_text"	is_show="true" linkedscene="scene_bt_tren_cao" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
-		<hotspot name="spot1804538886textline" is_ui="true" style="poi_line" ath="-102.503" atv="-34.403"/>
-
-	</scene>
-	
-	<scene mapx="0.77" mapy="0.35" name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
+<scene mapx="0.77" mapy="0.35" name="scene_bt_tren_cao" title="Phía trên bến du thuyền" onstart="lookat(0,0,140)" thumburl="panos/bt_tren_cao.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="ben-tau" child="" >
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -291,10 +204,219 @@
 		</image>
 
 		<hotspot name="spot1803779544" style="skin_hotspotstyle" is_ui="true" ath="-94.238" atv="12.965" depth="1000.0" linkedscene="scene_bt_neo_tau_1" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804558588" style="skin_hotspot_flycam_style" is_ui="true" ath="89.571" atv="-44.759" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
-		<hotspot name="spot1804558588thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true"  />
-		<hotspot name="spot1804558588text" is_ui="true" ath="89.571" atv="-44.759" html="Ana Marina- Trên cao" style="poi_label_text"	is_show="true" linkedscene="scene_bt_tren_cao" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1804558588" style="skin_hotspot_flycam_style" is_ui="true" ath="89.571" atv="-44.759" depth="1000.0" linkedscene="scene_vinpearl_land_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804558588thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_vinpearl_land_01" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1804558588text" is_ui="true" ath="89.571" atv="-44.759" html="VinWonders" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
 		<hotspot name="spot1804558588textline" is_ui="true" style="poi_line" ath="89.571" atv="-44.759"/>
+
+	</scene>
+
+	<scene mapx="0.4" mapy="0.5" name="scene_vinpearl_land_01" title="Toàn Cảnh 01" onstart="lookat(30,20,120)" thumburl="panos/vinpearl_land_01.tiles/thumb.jpg" lat="12.217215661733938" lng="109.24086106659564" alt="" heading="" doc="vin-wonder" child="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vinpearl_land_01.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vinpearl_land_01.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
+		</image>
+
+		<hotspot name="spot1786458565" style="skin_hotspot_drone" is_ui="true"  ath="64.097" atv="-3.385" depth="1000.0" linkedscene="scene_vinpearl_land_02" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786458565text" is_ui="true"  ath="64.097" atv="-3.385" html="Toàn Cảnh" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_02" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786458565textline" style="poi_line" is_ui="true"  ath="64.097" atv="-3.385"/>
+
+		
+		<hotspot name="spot1786458644" style="skin_hotspot_flycam_style" is_ui="true" ath="-168.086" atv="-12.943" depth="1000.0" linkedscene="scene_chua_long_son_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786458644thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_chua_long_son_01" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1786458644text" is_ui="true" ath="-168.086" atv="-12.943" html="Chùa Long Sơn" style="poi_label_text"	is_show="true" linkedscene="scene_chua_long_son_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786458644textline" is_ui="true" style="poi_line" ath="-168.086" atv="-12.943"/>
+
+	</scene>
+
+	<scene mapx="0.8" mapy="0.33" name="scene_vinpearl_land_02" title="Toàn Cảnh 02" onstart="lookat(-20,20,140)" thumburl="panos/vinpearl_land_02.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vinpearl_land_02.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vinpearl_land_02.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536" />
+		</image>
+
+		<hotspot name="spot1786458731" style="skin_hotspot_drone" is_ui="true"  ath="-61.864" atv="-3.326" depth="1000.0" linkedscene="scene_vinpearl_land_05" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786458731text" is_ui="true"  ath="-61.864" atv="-3.326" html="Toàn Cảnh" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_05" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786458731textline" style="poi_line" is_ui="true"  ath="-61.864" atv="-3.326"/>
+
+	</scene>
+	
+	<scene mapx="0.17" mapy="0.28" name="scene_vinpearl_land_05" title="Phía Trên" onstart="lookat(40,10,120)" thumburl="panos/vinpearl_land_05.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vinpearl_land_05.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vinpearl_land_05.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1786458940" style="skin_hotspot_here" is_ui="true"  ath="44.19" atv="16.214" depth="1000.0" linkedscene="scene_vinpearl_land_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786458940text" is_ui="true"  ath="44.19" atv="16.214" html="Khu Bể Bơi" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_03" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786458940textline" style="poi_line" is_ui="true"  ath="44.19" atv="16.214"/>
+
+		<hotspot name="spot1786459008" style="skin_hotspot_drone" is_ui="true" ath="-52.683" atv="-27.568" depth="1000.0" linkedscene="scene_vinpearl_land_01" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786459008text" is_ui="true" ath="-52.683" atv="-27.568" html="Toàn Cảnh" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_01" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786459008textline" style="poi_line" is_ui="true" ath="-52.683" atv="-27.568"/>
+
+	</scene>
+
+	<scene mapx="0.23" mapy="0.8" name="scene_vinpearl_land_03" title="Khu Bể Bơi" onstart="lookat(30,0,120)" thumburl="panos/vinpearl_land_03.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vinpearl_land_03.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vinpearl_land_03.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+
+		<hotspot name="spot1786459077" style="skin_hotspotstyle" is_ui="true" ath="56.835" atv="8.557" depth="1000.0" linkedscene="scene_vinpearl_land_04" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786459156" style="skin_hotspot_drone" is_ui="true"  ath="-136.529" atv="-24.055" depth="1000.0" linkedscene="scene_vinpearl_land_05" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786459156text" is_ui="true"  ath="-136.529" atv="-24.055" html="Phía Trên" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_05" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786459156textline" style="poi_line" is_ui="true"  ath="-136.529" atv="-24.055"/>
+
+	</scene>
+
+	<scene mapx="0.8" mapy="0.7" name="scene_vinpearl_land_04" title="Khu Đu Quay" onstart="lookat(120,0,120)" thumburl="panos/vinpearl_land_04.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="vin-wonder" child="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/vinpearl_land_04.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/vinpearl_land_04.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1600" />
+		</image>
+
+		<hotspot name="spot1786459228" style="skin_hotspot_flycam_style" is_ui="true" ath="90.867" atv="-20.371" depth="1000.0" linkedscene="scene_cho_dam" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1786459228thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_cho_dam" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1786459228text" is_ui="true" ath="90.867" atv="-20.371" html="Chợ đầm" style="poi_label_text"	is_show="true" linkedscene="scene_cho_dam" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1786459228textline" is_ui="true" style="poi_line" ath="90.867" atv="-20.371"/>
+		
+		<hotspot name="spot1786459270" style="skin_hotspotstyle" is_ui="true" ath="-48.085" atv="16.329" depth="1000.0" linkedscene="scene_vinpearl_land_03" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_cho_dam" title="cho-dam" onstart="" thumburl="panos/cho_dam.tiles/thumb.jpg" lat="" lng="" alt="" heading="" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cho_dam.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cho_dam.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,640,1280" />
+		</image>
+
+		<hotspot name="spot1808049267" style="skin_hotspot_here" ath="5.857" atv="25.346" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1808049267text" is_ui="true"  ath="5.857" atv="25.346" html="Bên dưới" style="poi_label_text"	is_show="true" linkedscene="scene_vinpearl_land_03" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1808049267textline" style="poi_line" is_ui="true"  ath="5.857" atv="25.346"/>
+	</scene>
+
+
+	<scene mapx="0.46" mapy="0.9" name="scene_cd_trai_cay" title="Chợ bên ngoài" onstart="lookat(155,0,140)" thumburl="panos/cd_trai_cay.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cd_trai_cay.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cd_trai_cay.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803779791" style="skin_hotspotstyle" is_ui="true" ath="161.485" atv="12.051" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene mapx="0.46" mapy="0.7" name="scene_cd_cong_vao" title="Cổng vào chợ" onstart="lookat(35,0,140)" thumburl="panos/cd_cong_vao.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cd_cong_vao.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cd_cong_vao.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803779944" style="skin_hotspotstyle" is_ui="true" ath="37.882" atv="24.816" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780211" style="skin_hotspotstyle" is_ui="true" ath="-117.61" atv="17.131" depth="1000.0" linkedscene="scene_cd_trai_cay" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene mapx="0.35" mapy="0.6" name="scene_cd_cho_banh" title="Gian hàng thực phẩm" onstart="lookat(-80,0,140)" thumburl="panos/cd_cho_banh.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cd_cho_banh.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cd_cho_banh.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803780434" style="skin_hotspotstyle" is_ui="true" ath="95.956" atv="13.37" depth="1000.0" linkedscene="scene_cd_cong_vao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780651" style="skin_hotspotstyle" is_ui="true" ath="-86.98" atv="16.997" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene mapx="0.55" mapy="0.6" name="scene_cd_thu_cong" title="Gian hàng thủ công mỹ nghệ" onstart="lookat(-120,0,140)" thumburl="panos/cd_thu_cong.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cd_thu_cong.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cd_thu_cong.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803780813" style="skin_hotspotstyle" is_ui="true" ath="46.643" atv="10.384" depth="1000.0" linkedscene="scene_cd_cho_banh" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1803780960" style="skin_hotspotstyle" is_ui="true" ath="-127.685" atv="16.534" depth="1000.0" linkedscene="scene_cd_trang_suc" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene mapx="0.46" mapy="0.35" name="scene_cd_trang_suc" title="Gian hàng quà lưu niệm" onstart="lookat(-90,0,140)" thumburl="panos/cd_trang_suc.tiles/thumb.jpg" lat="-0.00000000" lng="-0.00000000" alt="0.00" heading="0.0" doc="cho-dam" child="" >
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/cd_trang_suc.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/cd_trang_suc.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2560,4864" />
+		</image>
+
+		<hotspot name="spot1803781063" style="skin_hotspotstyle" is_ui="true" ath="50.477" atv="13.22" depth="1000.0" linkedscene="scene_cd_thu_cong" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804538886" style="skin_hotspot_flycam_style" is_ui="true" ath="-102.503" atv="-34.403" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot1804538886thumb" is_ui="true" style="skin_hotspotstyle_hover"  width="40%" height="20%" visible="false" depth="1000.0" linkedscene="scene_bt_tren_cao" linkedscene_hoffset="0.0" use3dtransition="true"  />
+		<hotspot name="spot1804538886text" is_ui="true" ath="-102.503" atv="-34.403" html="Ana Marina - Trên cao" style="poi_label_text"	is_show="true" linkedscene="scene_bt_tren_cao" depth="1000.0"  linkedscene_hoffset="0.0"  use3dtransition="true"/>
+		<hotspot name="spot1804538886textline" is_ui="true" style="poi_line" ath="-102.503" atv="-34.403"/>
 
 	</scene>
 

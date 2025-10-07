@@ -1,5 +1,5 @@
 <krpano>
-    <style name="skin_hotspot_drone" url="icons/drone.png" edge="top" distorted="true"
+    <style name="skin_hotspot_drone" url="icons/airplane.png" edge="top" distorted="true"
 	       tooltip=""
 	       linkedscene=""
 	       linkedscene_lookat=""
@@ -10,9 +10,7 @@
 	       scale="0.5"
            width="120"
            height="120"
-	       onover.addevent="tween(scale,0.55);"
-	       onout.addevent="tween(scale,0.5);"
-	       onloaded.addevent="skin_hotspotstyle_setup();"
+	       onloaded.addevent="do_crop_animation(120,120,50);"
 	       />
 
 	<style name="skin_hotspot_flycam_style" url="icons/helicopter.png" edge="top" distorted="false"
